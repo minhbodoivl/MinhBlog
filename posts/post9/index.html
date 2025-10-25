@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Bài viết 9 - Đa hình (Polymorphism) trong Java · MinhBlog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Nguyễn Đình Anh Minh">
+<meta name="description" content="Bài viết 9 trong hành trình học Java Essentials 1 tại Cisco Networking Academy – tìm hiểu đa hình (Polymorphism), một trong những trụ cột quan trọng nhất của lập trình hướng đối tượng.">
+<meta name="keywords" content="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bài viết 9 - Đa hình (Polymorphism) trong Java">
+  <meta name="twitter:description" content="Bài viết 9 trong hành trình học Java Essentials 1 tại Cisco Networking Academy – tìm hiểu đa hình (Polymorphism), một trong những trụ cột quan trọng nhất của lập trình hướng đối tượng.">
+
+<meta property="og:url" content="https://example.org/posts/post9/">
+  <meta property="og:site_name" content="MinhBlog">
+  <meta property="og:title" content="Bài viết 9 - Đa hình (Polymorphism) trong Java">
+  <meta property="og:description" content="Bài viết 9 trong hành trình học Java Essentials 1 tại Cisco Networking Academy – tìm hiểu đa hình (Polymorphism), một trong những trụ cột quan trọng nhất của lập trình hướng đối tượng.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-16T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-16T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Cisco Networking Academy">
+    <meta property="article:tag" content="Polymorphism">
+    <meta property="article:tag" content="OOP">
+    <meta property="article:tag" content="Java Essentials 1">
+
+
+
+
+<link rel="canonical" href="https://example.org/posts/post9/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://example.org/">
+      MinhBlog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about">Giới thiệu</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact">Liên hệ</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://example.org/posts/post9/">
+              Bài viết 9 - Đa hình (Polymorphism) trong Java
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-10-16T00:00:00Z">
+                October 16, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              6-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/java/">Java</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/cisco-networking-academy/">Cisco Networking Academy</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/polymorphism/">Polymorphism</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/oop/">OOP</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/java-essentials-1/">Java Essentials 1</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <blockquote>
+<p><em>“Đa hình khiến mình nhận ra rằng một hành động có thể mang nhiều hình thái khác nhau – giống như con người, cùng nói ‘chạy’, nhưng chạy bộ, chạy xe, hay chạy deadline đều khác nhau.”</em></p>
+</blockquote>
+<hr>
+<h2 id="-mục-tiêu">
+  🎯 Mục tiêu
+  <a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Hiểu khái niệm <strong>đa hình (Polymorphism)</strong> trong Java.</li>
+<li>Phân biệt giữa <strong>compile-time</strong> và <strong>runtime polymorphism</strong>.</li>
+<li>Sử dụng <strong>ghi đè phương thức (method overriding)</strong> và <strong>ép kiểu đối tượng (casting)</strong>.</li>
+<li>Làm quen với <strong>abstract class</strong> và <strong>interface</strong>.</li>
+</ul>
+<hr>
+<h2 id="-cảm-nhận-đầu-tiên">
+  💡 Cảm nhận đầu tiên
+  <a class="heading-link" href="#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Bài viết này khá “mind-blowing” 🤯 — vì Java cho phép <strong>một đối tượng được tham chiếu bởi nhiều kiểu khác nhau</strong>,<br>
+và hành vi của nó <strong>phụ thuộc vào kiểu thực tế tại runtime</strong> chứ không chỉ vào kiểu khai báo.<br>
+Cisco minh họa bằng ví dụ cực hay:</p>
+<blockquote>
+<p>“Một chiếc điều khiển có thể bật tivi, bật máy lạnh, hoặc bật đèn — tùy vào vật nó đang điều khiển.”<br>
+→ Chính là <strong>đa hình</strong> trong đời sống!</p>
+</blockquote>
+<hr>
+<h2 id="-kiến-thức-trọng-tâm">
+  📚 Kiến thức trọng tâm
+  <a class="heading-link" href="#-ki%e1%ba%bfn-th%e1%bb%a9c-tr%e1%bb%8dng-t%c3%a2m">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="-1-khái-niệm-đa-hình-polymorphism">
+  🔹 1. Khái niệm đa hình (Polymorphism)
+  <a class="heading-link" href="#-1-kh%c3%a1i-ni%e1%bb%87m-%c4%91a-h%c3%acnh-polymorphism">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>“Polymorphism” nghĩa là <strong>nhiều hình dạng khác nhau</strong>.<br>
+Trong Java, nó xảy ra khi <strong>một đối tượng của lớp con được tham chiếu bởi lớp cha</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sound</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Động vật phát ra âm thanh&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">extends</span> Animal {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sound</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Gâu gâu!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span> <span style="color:#66d9ef">extends</span> Animal {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sound</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Meo meo!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Animal a;
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog();
+</span></span><span style="display:flex;"><span>a.<span style="color:#a6e22e">sound</span>(); <span style="color:#75715e">// Gâu gâu!</span>
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cat();
+</span></span><span style="display:flex;"><span>a.<span style="color:#a6e22e">sound</span>(); <span style="color:#75715e">// Meo meo!</span>
+</span></span></code></pre></div><blockquote>
+<p>Mặc dù <code>a</code> có kiểu khai báo là <code>Animal</code>, nhưng hành vi thực tế lại phụ thuộc vào đối tượng thật (Dog hay Cat).</p>
+</blockquote>
+<hr>
+<h3 id="-2-compile-time-vs-runtime-polymorphism">
+  🔹 2. Compile-time vs Runtime Polymorphism
+  <a class="heading-link" href="#-2-compile-time-vs-runtime-polymorphism">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Compile-time (Static):</strong> thường là <strong>method overloading</strong> – cùng tên, khác tham số.</li>
+<li><strong>Runtime (Dynamic):</strong> là <strong>method overriding</strong> – lớp con định nghĩa lại hành vi của lớp cha.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Compile-time</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MathUtils</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) { <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">double</span> a, <span style="color:#66d9ef">double</span> b) { <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b; }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Runtime</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Shape</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>() { System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Vẽ hình...&#34;</span>); }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Circle</span> <span style="color:#66d9ef">extends</span> Shape {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>() { System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Vẽ hình tròn!&#34;</span>); }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Shape s <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Circle();
+</span></span><span style="display:flex;"><span>s.<span style="color:#a6e22e">draw</span>(); <span style="color:#75715e">// Gọi phương thức của lớp Circle (runtime polymorphism)</span>
+</span></span></code></pre></div><hr>
+<h3 id="-3-upcasting-và-downcasting">
+  🔹 3. Upcasting và Downcasting
+  <a class="heading-link" href="#-3-upcasting-v%c3%a0-downcasting">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Upcasting:</strong> Lớp con → lớp cha (tự động).<br>
+<strong>Downcasting:</strong> Lớp cha → lớp con (phải ép kiểu thủ công).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Animal a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog();  <span style="color:#75715e">// Upcasting</span>
+</span></span><span style="display:flex;"><span>a.<span style="color:#a6e22e">sound</span>();             <span style="color:#75715e">// Gâu gâu!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Dog d <span style="color:#f92672">=</span> (Dog) a;       <span style="color:#75715e">// Downcasting</span>
+</span></span><span style="display:flex;"><span>d.<span style="color:#a6e22e">sound</span>();
+</span></span></code></pre></div><blockquote>
+<p>⚠️ Nếu downcast sai kiểu, sẽ lỗi <code>ClassCastException</code>.</p>
+</blockquote>
+<hr>
+<h3 id="-4-lớp-trừu-tượng-abstract-class">
+  🔹 4. Lớp trừu tượng (Abstract class)
+  <a class="heading-link" href="#-4-l%e1%bb%9bp-tr%e1%bb%abu-t%c6%b0%e1%bb%a3ng-abstract-class">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Một <strong>lớp abstract</strong> có thể chứa <strong>phương thức trừu tượng (abstract method)</strong> – chưa có nội dung, bắt buộc lớp con phải ghi đè.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Shape</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rectangle</span> <span style="color:#66d9ef">extends</span> Shape {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Vẽ hình chữ nhật!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Shape s <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Rectangle();
+</span></span><span style="display:flex;"><span>s.<span style="color:#a6e22e">draw</span>(); <span style="color:#75715e">// Vẽ hình chữ nhật!</span>
+</span></span></code></pre></div><blockquote>
+<p>Abstract class rất hữu ích khi muốn định nghĩa “khuôn mẫu” cho các lớp con.</p>
+</blockquote>
+<hr>
+<h3 id="-5-interface-và-đa-hình">
+  🔹 5. Interface và đa hình
+  <a class="heading-link" href="#-5-interface-v%c3%a0-%c4%91a-h%c3%acnh">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Interface</strong> định nghĩa các hành vi mà lớp phải thực hiện, cho phép <strong>đa kế thừa hành vi</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Animal</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sound</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">implements</span> Animal {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sound</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Gâu gâu!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Animal dog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Dog();
+</span></span><span style="display:flex;"><span>dog.<span style="color:#a6e22e">sound</span>();
+</span></span></code></pre></div><blockquote>
+<p>Interface thể hiện <strong>đa hình ở cấp độ hành vi</strong> – nhiều lớp có thể cùng “thực hiện” một interface theo cách riêng.</p>
+</blockquote>
+<hr>
+<h2 id="-bài-tập-thực-hành">
+  🧠 Bài tập thực hành
+  <a class="heading-link" href="#-b%c3%a0i-t%e1%ba%adp-th%e1%bb%b1c-h%c3%a0nh">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="-bài-1-đa-hình-qua-lớp-cha">
+  💬 Bài 1: Đa hình qua lớp cha
+  <a class="heading-link" href="#-b%c3%a0i-1-%c4%91a-h%c3%acnh-qua-l%e1%bb%9bp-cha">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Vehicle</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">move</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Phương tiện đang di chuyển&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bike</span> <span style="color:#66d9ef">extends</span> Vehicle {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">move</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xe đạp đang chạy...&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span> <span style="color:#66d9ef">extends</span> Vehicle {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">move</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xe hơi đang lăn bánh...&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Vehicle v;
+</span></span><span style="display:flex;"><span>v <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Bike();
+</span></span><span style="display:flex;"><span>v.<span style="color:#a6e22e">move</span>();
+</span></span><span style="display:flex;"><span>v <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Car();
+</span></span><span style="display:flex;"><span>v.<span style="color:#a6e22e">move</span>();
+</span></span></code></pre></div><hr>
+<h3 id="-bài-2-abstract-class">
+  🧩 Bài 2: Abstract class
+  <a class="heading-link" href="#-b%c3%a0i-2-abstract-class">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">work</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Developer</span> <span style="color:#66d9ef">extends</span> Employee {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">work</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lập trình và fix bug&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Tester</span> <span style="color:#66d9ef">extends</span> Employee {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">work</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Kiểm thử phần mềm&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Employee e1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Developer();
+</span></span><span style="display:flex;"><span>Employee e2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Tester();
+</span></span><span style="display:flex;"><span>e1.<span style="color:#a6e22e">work</span>();
+</span></span><span style="display:flex;"><span>e2.<span style="color:#a6e22e">work</span>();
+</span></span></code></pre></div><hr>
+<h3 id="-bài-3-interface">
+  🧱 Bài 3: Interface
+  <a class="heading-link" href="#-b%c3%a0i-3-interface">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Drawable</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Circle</span> <span style="color:#66d9ef">implements</span> Drawable {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Vẽ hình tròn&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Square</span> <span style="color:#66d9ef">implements</span> Drawable {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Vẽ hình vuông&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Drawable d1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Circle();
+</span></span><span style="display:flex;"><span>Drawable d2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Square();
+</span></span><span style="display:flex;"><span>d1.<span style="color:#a6e22e">draw</span>();
+</span></span><span style="display:flex;"><span>d2.<span style="color:#a6e22e">draw</span>();
+</span></span></code></pre></div><hr>
+<h2 id="-kinh-nghiệm-học-tập">
+  📝 Kinh nghiệm học tập
+  <a class="heading-link" href="#-kinh-nghi%e1%bb%87m-h%e1%bb%8dc-t%e1%ba%adp">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>⚙️ <strong>Luôn khai báo theo kiểu cha (hoặc interface)</strong>, giúp chương trình dễ mở rộng.</li>
+<li>🧠 <strong>Hiểu rõ upcasting/downcasting</strong>, đặc biệt là khi dùng danh sách đối tượng hỗn hợp.</li>
+<li>💡 <strong>Interface giúp tách rời phần định nghĩa và phần thực thi</strong> → code linh hoạt hơn.</li>
+<li>🚀 <strong>Tư duy hướng hành vi (behavior)</strong> thay vì hướng lớp cụ thể.</li>
+</ul>
+<hr>
+<h2 id="-khó-khăn--cách-khắc-phục">
+  ⚙️ Khó khăn &amp; Cách khắc phục
+  <a class="heading-link" href="#-kh%c3%b3-kh%c4%83n--c%c3%a1ch-kh%e1%ba%afc-ph%e1%bb%a5c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="-nhầm-giữa-override-và-overload">
+  😵 Nhầm giữa override và overload
+  <a class="heading-link" href="#-nh%e1%ba%a7m-gi%e1%bb%afa-override-v%c3%a0-overload">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Mình từng nghĩ hai cái là một, nhưng thật ra:</p>
+<ul>
+<li><code>Overload</code>: cùng tên, khác tham số.</li>
+<li><code>Override</code>: cùng tên, cùng tham số, khác lớp (cha – con).</li>
+</ul>
+<h3 id="-ép-kiểu-sai">
+  🧩 Ép kiểu sai
+  <a class="heading-link" href="#-%c3%a9p-ki%e1%bb%83u-sai">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Khi downcast sai kiểu (VD: ép <code>Cat</code> thành <code>Dog</code>), chương trình lỗi ngay.<br>
+Giờ mình luôn kiểm tra bằng <code>instanceof</code> trước khi ép kiểu.</p>
+<h3 id="-abstract-vs-interface">
+  🤔 Abstract vs Interface
+  <a class="heading-link" href="#-abstract-vs-interface">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Ban đầu hơi mơ hồ, nhưng mình nhớ mẹo này:</p>
+<blockquote>
+<p>“Abstract – là khung xương; Interface – là bản hợp đồng.”</p>
+</blockquote>
+<hr>
+<h2 id="-kết-quả--hướng-đi-bài-viết-tới">
+  ✅ Kết quả &amp; Hướng đi Bài viết tới
+  <a class="heading-link" href="#-k%e1%ba%bft-qu%e1%ba%a3--h%c6%b0%e1%bb%9bng-%c4%91i-b%c3%a0i-vi%e1%ba%bft-t%e1%bb%9bi">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="bài-viết-9--kết-quả">
+  Bài viết 9 — Kết quả
+  <a class="heading-link" href="#b%c3%a0i-vi%e1%ba%bft-9--k%e1%ba%bft-qu%e1%ba%a3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Hiểu vững <strong>đa hình</strong> trong Java và cách áp dụng vào thực tế.</li>
+<li>Sử dụng thành thạo <strong>abstract class</strong>, <strong>interface</strong>, <strong>overriding</strong>, <strong>upcasting/downcasting</strong>.</li>
+<li>Hoàn thành bài thực hành nhỏ mô phỏng hệ thống nhân viên (Developer, Tester, Manager).</li>
+</ul>
+<h3 id="bài-viết-10--kế-hoạch">
+  Bài viết 10 — Kế hoạch
+  <a class="heading-link" href="#b%c3%a0i-vi%e1%ba%bft-10--k%e1%ba%bf-ho%e1%ba%a1ch">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Học về <strong>xử lý ngoại lệ (Exception Handling)</strong> trong Java.</li>
+<li>Hiểu cơ chế <strong>try-catch-finally</strong> và <strong>throw/throws</strong>.</li>
+<li>Viết chương trình có khả năng xử lý lỗi một cách an toàn, chuyên nghiệp.</li>
+</ul>
+<hr>
+<blockquote>
+<p>🌱 <em>Polymorphism dạy mình rằng, điều quan trọng không nằm ở “bạn là ai”, mà là “bạn hành động như thế nào”. Chính điều này khiến code trở nên linh hoạt và sống động hơn bao giờ hết.</em></p>
+</blockquote>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Nguyễn Đình Anh Minh 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

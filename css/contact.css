@@ -1,0 +1,126 @@
+/* Contact section styles */
+.contact-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-size: 2em;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: #e0e0e0;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.contact-icon i {
+    font-size: 1.5rem;
+    color: #0366d6;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    margin: 0 0 0.3rem 0;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.contact-link:hover {
+    text-decoration: none;
+}
+
+/* Hiệu ứng hover cho từng loại contact */
+.contact-item:hover .phone i { color: #2ecc71; }
+.contact-item:hover .email i { color: #e74c3c; }
+.contact-item:hover .facebook i { color: #3b5999; }
+.contact-item:hover .github i { color: #6e5494; }
+.contact-item:hover .linkedin i { color: #0077b5; }
+.contact-item:hover .twitter i { color: #55acee; }
+
+/* Social media icons colors */
+.github i { color: #333; }
+.facebook i { color: #1877f2; }
+.email i { color: #ea4335; }
+.phone i { color: #28a745; }
+.linkedin i { color: #0077b5; }
+.twitter i { color: #1da1f2; }
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .contact-title {
+        font-size: 1.75em;
+        margin-bottom: 2rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+}

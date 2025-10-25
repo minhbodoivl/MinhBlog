@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Method on MinhBlog</title>
+    <link>https://example.org/tags/method/</link>
+    <description>Recent content in Method on MinhBlog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/method/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài viết 6 - Làm quen với phương thức (methods) trong Java</title>
+      <link>https://example.org/posts/post6/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/posts/post6/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;“Một chương trình lớn không thể chỉ có một hàm main. Khi biết chia nhỏ công việc thành các phương thức, mình cảm giác như đang sắp xếp mọi thứ có trật tự hơn hẳn.”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-mục-tiêu&#34;&gt;&#xD;&#xA;  🎯 Mục tiêu&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-m%e1%bb%a5c-ti%c3%aau&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hiểu &lt;strong&gt;khái niệm phương thức (method)&lt;/strong&gt; trong Java.&lt;/li&gt;&#xA;&lt;li&gt;Biết cách &lt;strong&gt;định nghĩa, gọi và truyền tham số&lt;/strong&gt; cho phương thức.&lt;/li&gt;&#xA;&lt;li&gt;Làm quen với &lt;strong&gt;phương thức có giá trị trả về&lt;/strong&gt; (&lt;code&gt;return&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;li&gt;Ứng dụng phương thức để viết code &lt;strong&gt;tái sử dụng, gọn gàng, dễ bảo trì&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-cảm-nhận-đầu-tiên&#34;&gt;&#xD;&#xA;  💡 Cảm nhận đầu tiên&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Sau khi làm quen với biến và mảng, Bài viết này mình nhận ra: nếu không chia code thành nhiều phần nhỏ thì rất khó kiểm soát.&lt;br&gt;&#xA;Phương thức giúp mình &lt;strong&gt;tổ chức logic chương trình&lt;/strong&gt; thành từng khối, mỗi khối chỉ làm một nhiệm vụ cụ thể.&lt;br&gt;&#xA;Cảm giác như từ “người viết từng dòng lệnh” chuyển thành “người thiết kế hệ thống”.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

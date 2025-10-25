@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2D Game on MinhBlog</title>
+    <link>http://localhost:1313/tags/2d-game/</link>
+    <description>Recent content in 2D Game on MinhBlog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/2d-game/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bài viết 2 — Trải nghiệm làm game đầu tiên bằng Unity</title>
+      <link>http://localhost:1313/posts/post2/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/post2/</guid>
+      <description>&lt;p&gt;![Unity Game Development]&lt;/p&gt;&#xA;&lt;p&gt;Lần đầu mình thử làm game 2D bằng Unity, cảm giác cực kỳ thú vị!&lt;br&gt;&#xA;Từ việc tạo nhân vật, thêm chuyển động, cho đến viết code va chạm — tất cả đều mới mẻ.&lt;/p&gt;&#xA;&lt;p&gt;Mình đã hoàn thành một bản demo nhỏ, và điều đó khiến mình rất tự hào 🎮&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on MinhBlog</title>
+    <link>https://example.org/tags/</link>
+    <description>Recent content in Tags on MinhBlog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cisco Networking Academy</title>
+      <link>https://example.org/tags/cisco-networking-academy/</link>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/cisco-networking-academy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Học Tập</title>
+      <link>https://example.org/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</link>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>https://example.org/tags/java/</link>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lập Trình</title>
+      <link>https://example.org/tags/l%E1%BA%ADp-tr%C3%ACnh/</link>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/l%E1%BA%ADp-tr%C3%ACnh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tổng Kết</title>
+      <link>https://example.org/tags/t%E1%BB%95ng-k%E1%BA%BFt/</link>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/t%E1%BB%95ng-k%E1%BA%BFt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debugging</title>
+      <link>https://example.org/tags/debugging/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/debugging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exception Handling</title>
+      <link>https://example.org/tags/exception-handling/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/exception-handling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java Essentials 2</title>
+      <link>https://example.org/tags/java-essentials-2/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/java-essentials-2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ArrayList</title>
+      <link>https://example.org/tags/arraylist/</link>
+      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/arraylist/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Collection</title>
+      <link>https://example.org/tags/collection/</link>
+      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/collection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HashMap</title>
+      <link>https://example.org/tags/hashmap/</link>
+      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/hashmap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BufferedReader</title>
+      <link>https://example.org/tags/bufferedreader/</link>
+      <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/bufferedreader/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>File I/O</title>
+      <link>https://example.org/tags/file-i/o/</link>
+      <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/file-i/o/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FileWriter</title>
+      <link>https://example.org/tags/filewriter/</link>
+      <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/filewriter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Throw</title>
+      <link>https://example.org/tags/throw/</link>
+      <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/throw/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Try Catch</title>
+      <link>https://example.org/tags/try-catch/</link>
+      <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/try-catch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java Essentials 1</title>
+      <link>https://example.org/tags/java-essentials-1/</link>
+      <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/java-essentials-1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OOP</title>
+      <link>https://example.org/tags/oop/</link>
+      <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/oop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Polymorphism</title>
+      <link>https://example.org/tags/polymorphism/</link>
+      <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/polymorphism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Inheritance</title>
+      <link>https://example.org/tags/inheritance/</link>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/inheritance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hàm</title>
+      <link>https://example.org/tags/h%C3%A0m/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/h%C3%A0m/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Method</title>
+      <link>https://example.org/tags/method/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/method/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Array</title>
+      <link>https://example.org/tags/array/</link>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/array/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mảng</title>
+      <link>https://example.org/tags/m%E1%BA%A3ng/</link>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/m%E1%BA%A3ng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Điều Kiện</title>
+      <link>https://example.org/tags/%C4%91i%E1%BB%81u-ki%E1%BB%87n/</link>
+      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/%C4%91i%E1%BB%81u-ki%E1%BB%87n/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vòng Lặp</title>
+      <link>https://example.org/tags/v%C3%B2ng-l%E1%BA%B7p/</link>
+      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/v%C3%B2ng-l%E1%BA%B7p/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lập Trình Hướng Đối Tượng</title>
+      <link>https://example.org/tags/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng/</link>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cisco</title>
+      <link>https://example.org/tags/cisco/</link>
+      <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/cisco/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mạng Máy Tính</title>
+      <link>https://example.org/tags/m%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh/</link>
+      <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/m%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

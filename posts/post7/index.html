@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Bài viết 7 - Xử lý ngoại lệ (Exception Handling) trong Java · MinhBlog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Nguyễn Đình Anh Minh">
+<meta name="description" content="Bài viết 7 trong hành trình học Java Essentials 1 tại Cisco Networking Academy – tìm hiểu cách xử lý ngoại lệ (Exception Handling) giúp chương trình an toàn, ổn định và chuyên nghiệp hơn.">
+<meta name="keywords" content="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bài viết 7 - Xử lý ngoại lệ (Exception Handling) trong Java">
+  <meta name="twitter:description" content="Bài viết 7 trong hành trình học Java Essentials 1 tại Cisco Networking Academy – tìm hiểu cách xử lý ngoại lệ (Exception Handling) giúp chương trình an toàn, ổn định và chuyên nghiệp hơn.">
+
+<meta property="og:url" content="https://example.org/posts/post7/">
+  <meta property="og:site_name" content="MinhBlog">
+  <meta property="og:title" content="Bài viết 7 - Xử lý ngoại lệ (Exception Handling) trong Java">
+  <meta property="og:description" content="Bài viết 7 trong hành trình học Java Essentials 1 tại Cisco Networking Academy – tìm hiểu cách xử lý ngoại lệ (Exception Handling) giúp chương trình an toàn, ổn định và chuyên nghiệp hơn.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-08T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Cisco Networking Academy">
+    <meta property="article:tag" content="Exception Handling">
+    <meta property="article:tag" content="Try Catch">
+    <meta property="article:tag" content="Java Essentials 1">
+
+
+
+
+<link rel="canonical" href="https://example.org/posts/post7/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://example.org/">
+      MinhBlog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about">Giới thiệu</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact">Liên hệ</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://example.org/posts/post7/">
+              Bài viết 7 - Xử lý ngoại lệ (Exception Handling) trong Java
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-10-08T00:00:00Z">
+                October 8, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/java/">Java</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/cisco-networking-academy/">Cisco Networking Academy</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/exception-handling/">Exception Handling</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/try-catch/">Try Catch</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/java-essentials-1/">Java Essentials 1</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <blockquote>
+<p><em>“Lần đầu tiên thấy chương trình không bị ‘crash’ dù nhập sai dữ liệu, mình mới thật sự hiểu sức mạnh của Exception Handling.”</em></p>
+</blockquote>
+<hr>
+<h2 id="-mục-tiêu">
+  🎯 Mục tiêu
+  <a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Hiểu <strong>khái niệm ngoại lệ (exception)</strong> và tại sao cần xử lý chúng.</li>
+<li>Biết sử dụng <strong>try – catch – finally</strong> để bắt và xử lý lỗi.</li>
+<li>Làm quen với <strong>throw</strong> và <strong>throws</strong> để tạo và lan truyền ngoại lệ.</li>
+<li>Viết chương trình <strong>an toàn hơn, không dừng đột ngột khi gặp lỗi.</strong></li>
+</ul>
+<hr>
+<h2 id="-cảm-nhận-đầu-tiên">
+  💡 Cảm nhận đầu tiên
+  <a class="heading-link" href="#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Bài viết này, mình bắt đầu hiểu rằng không phải mọi lỗi đều là “bug” — có những lỗi xảy ra <strong>do dữ liệu người dùng nhập sai, do chia cho 0, hoặc do đọc file không tồn tại</strong>.<br>
+Nếu không xử lý, chương trình sẽ <strong>crash ngay lập tức</strong>.<br>
+Nhờ có <code>try-catch</code>, Java cho phép <strong>kiểm soát tình huống lỗi</strong> một cách nhẹ nhàng và chuyên nghiệp.</p>
+<hr>
+<h2 id="-kiến-thức-trọng-tâm">
+  📚 Kiến thức trọng tâm
+  <a class="heading-link" href="#-ki%e1%ba%bfn-th%e1%bb%a9c-tr%e1%bb%8dng-t%c3%a2m">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="-1-ngoại-lệ-là-gì">
+  🔹 1. Ngoại lệ là gì?
+  <a class="heading-link" href="#-1-ngo%e1%ba%a1i-l%e1%bb%87-l%c3%a0-g%c3%ac">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Ngoại lệ (Exception) là <strong>sự kiện bất thường</strong> xảy ra trong quá trình thực thi chương trình, làm gián đoạn luồng chạy bình thường.<br>
+Ví dụ: chia cho 0, truy cập phần tử ngoài mảng, nhập sai kiểu dữ liệu,&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 10;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a <span style="color:#f92672">/</span> b);  <span style="color:#75715e">// Lỗi ArithmeticException</span>
+</span></span></code></pre></div><hr>
+<h3 id="-2-cấu-trúc-try--catch">
+  🔹 2. Cấu trúc try – catch
+  <a class="heading-link" href="#-2-c%e1%ba%a5u-tr%c3%bac-try--catch">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Cấu trúc cơ bản để xử lý ngoại lệ trong Java:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> 10 <span style="color:#f92672">/</span> 0;
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Kết quả: &#34;</span> <span style="color:#f92672">+</span> result);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (ArithmeticException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: Không thể chia cho 0!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>🧠 Khi dòng lệnh trong <code>try</code> gây lỗi, chương trình <strong>nhảy sang khối <code>catch</code></strong> để xử lý mà không dừng đột ngột.</p>
+<hr>
+<h3 id="-3-khối-finally">
+  🔹 3. Khối finally
+  <a class="heading-link" href="#-3-kh%e1%bb%91i-finally">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Khối <code>finally</code> luôn được thực thi <strong>dù có lỗi hay không</strong>, thường dùng để <strong>đóng tài nguyên</strong> như file, kết nối, v.v.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> {1, 2, 3};
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(arr<span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (ArrayIndexOutOfBoundsException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: Truy cập ngoài giới hạn mảng!&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">finally</span> {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hoàn tất xử lý!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h3 id="-4-xử-lý-nhiều-loại-ngoại-lệ">
+  🔹 4. Xử lý nhiều loại ngoại lệ
+  <a class="heading-link" href="#-4-x%e1%bb%ad-l%c3%bd-nhi%e1%bb%81u-lo%e1%ba%a1i-ngo%e1%ba%a1i-l%e1%bb%87">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Có thể có nhiều <code>catch</code> để xử lý các lỗi khác nhau.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    String text <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(text.<span style="color:#a6e22e">length</span>());
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (ArithmeticException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi số học!&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (NullPointerException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi null!&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (Exception e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi không xác định!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h3 id="-5-tự-ném-ngoại-lệ-throw">
+  🔹 5. Tự ném ngoại lệ (throw)
+  <a class="heading-link" href="#-5-t%e1%bb%b1-n%c3%a9m-ngo%e1%ba%a1i-l%e1%bb%87-throw">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Khi muốn <strong>chủ động tạo lỗi</strong>, ta có thể dùng <code>throw</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">checkAge</span>(<span style="color:#66d9ef">int</span> age) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (age <span style="color:#f92672">&lt;</span> 18) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException(<span style="color:#e6db74">&#34;Chưa đủ tuổi!&#34;</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Đủ điều kiện!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    checkAge(15);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (IllegalArgumentException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h3 id="-6-từ-khóa-throws">
+  🔹 6. Từ khóa throws
+  <a class="heading-link" href="#-6-t%e1%bb%ab-kh%c3%b3a-throws">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Dùng để <strong>khai báo ngoại lệ có thể phát sinh</strong> ở phương thức, buộc nơi gọi phải xử lý.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">readFile</span>(String fileName) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>    FileReader f <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileReader(fileName);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    readFile(<span style="color:#e6db74">&#34;data.txt&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (IOException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Không thể đọc file!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="-bài-tập-thực-hành">
+  🧠 Bài tập thực hành
+  <a class="heading-link" href="#-b%c3%a0i-t%e1%ba%adp-th%e1%bb%b1c-h%c3%a0nh">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="-bài-1-chia-hai-số-có-xử-lý-ngoại-lệ">
+  💬 Bài 1: Chia hai số có xử lý ngoại lệ
+  <a class="heading-link" href="#-b%c3%a0i-1-chia-hai-s%e1%bb%91-c%c3%b3-x%e1%bb%ad-l%c3%bd-ngo%e1%ba%a1i-l%e1%bb%87">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    Scanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Nhập a: &#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextInt</span>();
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Nhập b: &#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextInt</span>();
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Kết quả: &#34;</span> <span style="color:#f92672">+</span> (a <span style="color:#f92672">/</span> b));
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (ArithmeticException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: Không thể chia cho 0!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h3 id="-bài-2-kiểm-tra-đầu-vào-hợp-lệ">
+  🧩 Bài 2: Kiểm tra đầu vào hợp lệ
+  <a class="heading-link" href="#-b%c3%a0i-2-ki%e1%bb%83m-tra-%c4%91%e1%ba%a7u-v%c3%a0o-h%e1%bb%a3p-l%e1%bb%87">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    Scanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Nhập tuổi: &#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> age <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextInt</span>();
+</span></span><span style="display:flex;"><span>    checkAge(age);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (InputMismatchException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: Bạn phải nhập số!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h3 id="-bài-3-đọc-file-có-kiểm-tra-lỗi">
+  📁 Bài 3: Đọc file có kiểm tra lỗi
+  <a class="heading-link" href="#-b%c3%a0i-3-%c4%91%e1%bb%8dc-file-c%c3%b3-ki%e1%bb%83m-tra-l%e1%bb%97i">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    FileReader fr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileReader(<span style="color:#e6db74">&#34;input.txt&#34;</span>);
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;File mở thành công!&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (FileNotFoundException e) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Không tìm thấy file!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="-kinh-nghiệm-học-tập">
+  📝 Kinh nghiệm học tập
+  <a class="heading-link" href="#-kinh-nghi%e1%bb%87m-h%e1%bb%8dc-t%e1%ba%adp">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>🧠 <strong>Luôn dùng try-catch khi nhập dữ liệu từ người dùng</strong> để tránh crash.</li>
+<li>🧩 <strong>Chỉ bắt lỗi cần thiết:</strong> Không nên bắt “Exception” chung chung trừ khi thật sự cần.</li>
+<li>🧰 <strong>Sử dụng finally</strong> để đóng tài nguyên (file, kết nối mạng, scanner,&hellip;).</li>
+<li>🧾 <strong>In thông báo rõ ràng:</strong> Giúp người dùng hiểu chuyện gì xảy ra mà không phải nhìn lỗi hệ thống.</li>
+</ul>
+<hr>
+<h2 id="-khó-khăn--cách-khắc-phục">
+  ⚙️ Khó khăn &amp; Cách khắc phục
+  <a class="heading-link" href="#-kh%c3%b3-kh%c4%83n--c%c3%a1ch-kh%e1%ba%afc-ph%e1%bb%a5c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="-quên-khối-catch">
+  😵 Quên khối <code>catch</code>
+  <a class="heading-link" href="#-qu%c3%aan-kh%e1%bb%91i-catch">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Lúc đầu mình hay chỉ viết <code>try</code> mà quên <code>catch</code> — chương trình vẫn lỗi như thường.<br>
+Giờ mình luôn nhớ: <strong>phải có ít nhất một <code>catch</code> hoặc <code>finally</code></strong> đi kèm.</p>
+<h3 id="-bắt-sai-loại-ngoại-lệ">
+  🧱 Bắt sai loại ngoại lệ
+  <a class="heading-link" href="#-b%e1%ba%aft-sai-lo%e1%ba%a1i-ngo%e1%ba%a1i-l%e1%bb%87">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Đôi khi mình viết <code>catch (ArithmeticException)</code> nhưng lỗi lại là <code>NullPointerException</code>.<br>
+Kinh nghiệm: nên đọc kỹ thông báo lỗi trên console để xác định đúng loại exception.</p>
+<h3 id="-dùng-throw-sai-chỗ">
+  ⚠️ Dùng <code>throw</code> sai chỗ
+  <a class="heading-link" href="#-d%c3%b9ng-throw-sai-ch%e1%bb%97">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Ban đầu mình hay <code>throw</code> trong <code>main()</code> mà không bắt lại → chương trình dừng luôn.<br>
+Giờ thì mình hiểu: <strong>chỉ nên throw trong hàm nhỏ</strong>, rồi xử lý ở cấp cao hơn.</p>
+<hr>
+<h2 id="-kết-quả--hướng-đi-bài-viết-tới">
+  ✅ Kết quả &amp; Hướng đi Bài viết tới
+  <a class="heading-link" href="#-k%e1%ba%bft-qu%e1%ba%a3--h%c6%b0%e1%bb%9bng-%c4%91i-b%c3%a0i-vi%e1%ba%bft-t%e1%bb%9bi">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="bài-viết-7--kết-quả">
+  Bài viết 7 — Kết quả
+  <a class="heading-link" href="#b%c3%a0i-vi%e1%ba%bft-7--k%e1%ba%bft-qu%e1%ba%a3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Biết <strong>phân biệt lỗi cú pháp và lỗi ngoại lệ</strong>.</li>
+<li>Thành thạo cấu trúc <code>try – catch – finally</code>.</li>
+<li>Tạo và xử lý <strong>ngoại lệ tùy chỉnh</strong> bằng <code>throw</code>.</li>
+<li>Viết chương trình an toàn hơn, không crash khi nhập sai.</li>
+</ul>
+<h3 id="bài-viết-8--kế-hoạch">
+  Bài viết 8 — Kế hoạch
+  <a class="heading-link" href="#b%c3%a0i-vi%e1%ba%bft-8--k%e1%ba%bf-ho%e1%ba%a1ch">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Tìm hiểu <strong>Kế thừa (Inheritance)</strong> – một trong bốn trụ cột của lập trình hướng đối tượng.</li>
+<li>Học cách tạo <strong>lớp con (subclass)</strong> kế thừa từ <strong>lớp cha (superclass)</strong>.</li>
+<li>Bắt đầu viết chương trình có cấu trúc <strong>đa tầng, tái sử dụng tối đa.</strong></li>
+</ul>
+<hr>
+<blockquote>
+<p>🌱 <em>Exception Handling giúp mình thay đổi tư duy: thay vì sợ lỗi, mình học cách đón nhận và xử lý chúng một cách chủ động — đó mới là dấu hiệu của một lập trình viên thực thụ.</em></p>
+</blockquote>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Nguyễn Đình Anh Minh 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

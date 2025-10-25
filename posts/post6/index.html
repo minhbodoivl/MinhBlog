@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Bài viết 6 - Làm quen với phương thức (methods) trong Java · MinhBlog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Nguyễn Đình Anh Minh">
+<meta name="description" content="Bài viết 6 trong hành trình học Java Essentials 1 tại Cisco Networking Academy – tìm hiểu cách tách chương trình thành các phương thức (hàm) giúp code gọn gàng, dễ hiểu và tái sử dụng.">
+<meta name="keywords" content="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bài viết 6 - Làm quen với phương thức (methods) trong Java">
+  <meta name="twitter:description" content="Bài viết 6 trong hành trình học Java Essentials 1 tại Cisco Networking Academy – tìm hiểu cách tách chương trình thành các phương thức (hàm) giúp code gọn gàng, dễ hiểu và tái sử dụng.">
+
+<meta property="og:url" content="https://example.org/posts/post6/">
+  <meta property="og:site_name" content="MinhBlog">
+  <meta property="og:title" content="Bài viết 6 - Làm quen với phương thức (methods) trong Java">
+  <meta property="og:description" content="Bài viết 6 trong hành trình học Java Essentials 1 tại Cisco Networking Academy – tìm hiểu cách tách chương trình thành các phương thức (hàm) giúp code gọn gàng, dễ hiểu và tái sử dụng.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-01T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Cisco Networking Academy">
+    <meta property="article:tag" content="Method">
+    <meta property="article:tag" content="Hàm">
+    <meta property="article:tag" content="Java Essentials 1">
+
+
+
+
+<link rel="canonical" href="https://example.org/posts/post6/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://example.org/">
+      MinhBlog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about">Giới thiệu</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact">Liên hệ</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://example.org/posts/post6/">
+              Bài viết 6 - Làm quen với phương thức (methods) trong Java
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-10-01T00:00:00Z">
+                October 1, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/java/">Java</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/cisco-networking-academy/">Cisco Networking Academy</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/method/">Method</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/h%C3%A0m/">Hàm</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/java-essentials-1/">Java Essentials 1</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <blockquote>
+<p><em>“Một chương trình lớn không thể chỉ có một hàm main. Khi biết chia nhỏ công việc thành các phương thức, mình cảm giác như đang sắp xếp mọi thứ có trật tự hơn hẳn.”</em></p>
+</blockquote>
+<hr>
+<h2 id="-mục-tiêu">
+  🎯 Mục tiêu
+  <a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Hiểu <strong>khái niệm phương thức (method)</strong> trong Java.</li>
+<li>Biết cách <strong>định nghĩa, gọi và truyền tham số</strong> cho phương thức.</li>
+<li>Làm quen với <strong>phương thức có giá trị trả về</strong> (<code>return</code>).</li>
+<li>Ứng dụng phương thức để viết code <strong>tái sử dụng, gọn gàng, dễ bảo trì</strong>.</li>
+</ul>
+<hr>
+<h2 id="-cảm-nhận-đầu-tiên">
+  💡 Cảm nhận đầu tiên
+  <a class="heading-link" href="#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Sau khi làm quen với biến và mảng, Bài viết này mình nhận ra: nếu không chia code thành nhiều phần nhỏ thì rất khó kiểm soát.<br>
+Phương thức giúp mình <strong>tổ chức logic chương trình</strong> thành từng khối, mỗi khối chỉ làm một nhiệm vụ cụ thể.<br>
+Cảm giác như từ “người viết từng dòng lệnh” chuyển thành “người thiết kế hệ thống”.</p>
+<hr>
+<h2 id="-kiến-thức-trọng-tâm">
+  📚 Kiến thức trọng tâm
+  <a class="heading-link" href="#-ki%e1%ba%bfn-th%e1%bb%a9c-tr%e1%bb%8dng-t%c3%a2m">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="-1-định-nghĩa-phương-thức-cơ-bản">
+  🔹 1. Định nghĩa phương thức cơ bản
+  <a class="heading-link" href="#-1-%c4%91%e1%bb%8bnh-ngh%c4%a9a-ph%c6%b0%c6%a1ng-th%e1%bb%a9c-c%c6%a1-b%e1%ba%a3n">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sayHello</span>() {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xin chào, mình là Minh!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    sayHello();  <span style="color:#75715e">// Gọi phương thức</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>👉 Ở đây, <code>sayHello()</code> là một <strong>phương thức không có tham số và không trả về giá trị</strong> (<code>void</code>).</p>
+<hr>
+<h3 id="-2-phương-thức-có-tham-số">
+  🔹 2. Phương thức có tham số
+  <a class="heading-link" href="#-2-ph%c6%b0%c6%a1ng-th%e1%bb%a9c-c%c3%b3-tham-s%e1%bb%91">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Phương thức có thể nhận dữ liệu đầu vào để xử lý.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">greet</span>(String name) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xin chào, &#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    greet(<span style="color:#e6db74">&#34;Minh&#34;</span>);
+</span></span><span style="display:flex;"><span>    greet(<span style="color:#e6db74">&#34;An&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>💡 Mỗi lần gọi <code>greet()</code>, giá trị trong ngoặc sẽ được truyền vào tham số <code>name</code>.</p>
+<hr>
+<h3 id="-3-phương-thức-có-giá-trị-trả-về-return">
+  🔹 3. Phương thức có giá trị trả về (<code>return</code>)
+  <a class="heading-link" href="#-3-ph%c6%b0%c6%a1ng-th%e1%bb%a9c-c%c3%b3-gi%c3%a1-tr%e1%bb%8b-tr%e1%ba%a3-v%e1%bb%81-return">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">sum</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> sum(5, 7);
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tổng là: &#34;</span> <span style="color:#f92672">+</span> result);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>🧠 Từ khóa <code>return</code> giúp trả về kết quả cho phần gọi hàm.</p>
+<hr>
+<h3 id="-4-phân-biệt-void-và-kiểu-trả-về">
+  🔹 4. Phân biệt <code>void</code> và kiểu trả về
+  <a class="heading-link" href="#-4-ph%c3%a2n-bi%e1%bb%87t-void-v%c3%a0-ki%e1%bb%83u-tr%e1%ba%a3-v%e1%bb%81">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Loại phương thức</th>
+          <th>Kiểu trả về</th>
+          <th>Ví dụ</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Không trả về</td>
+          <td><code>void</code></td>
+          <td><code>void printName()</code></td>
+      </tr>
+      <tr>
+          <td>Trả về giá trị</td>
+          <td>Kiểu dữ liệu (<code>int</code>, <code>double</code>, <code>String</code>, …)</td>
+          <td><code>int sum(int a, int b)</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="-5-gọi-phương-thức-từ-phương-thức-khác">
+  🔹 5. Gọi phương thức từ phương thức khác
+  <a class="heading-link" href="#-5-g%e1%bb%8di-ph%c6%b0%c6%a1ng-th%e1%bb%a9c-t%e1%bb%ab-ph%c6%b0%c6%a1ng-th%e1%bb%a9c-kh%c3%a1c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Một chương trình có thể chia nhỏ logic ra nhiều hàm rồi liên kết chúng.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">square</span>(<span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n <span style="color:#f92672">*</span> n;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">showSquare</span>(<span style="color:#66d9ef">int</span> num) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> square(num);
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Bình phương của &#34;</span> <span style="color:#f92672">+</span> num <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; là &#34;</span> <span style="color:#f92672">+</span> result);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    showSquare(4);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="-bài-tập-tiêu-biểu">
+  🧠 Bài tập tiêu biểu
+  <a class="heading-link" href="#-b%c3%a0i-t%e1%ba%adp-ti%c3%aau-bi%e1%bb%83u">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="-bài-1-viết-hàm-tính-giai-thừa">
+  🧮 Bài 1: Viết hàm tính giai thừa
+  <a class="heading-link" href="#-b%c3%a0i-1-vi%e1%ba%bft-h%c3%a0m-t%c3%adnh-giai-th%e1%bb%aba">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">factorial</span>(<span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> 1;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">*=</span> i;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;5! = &#34;</span> <span style="color:#f92672">+</span> factorial(5));
+</span></span></code></pre></div><hr>
+<h3 id="-bài-2-kiểm-tra-số-nguyên-tố">
+  💬 Bài 2: Kiểm tra số nguyên tố
+  <a class="heading-link" href="#-b%c3%a0i-2-ki%e1%bb%83m-tra-s%e1%bb%91-nguy%c3%aan-t%e1%bb%91">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isPrime</span>(<span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">&lt;</span> 2) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 2; i <span style="color:#f92672">&lt;=</span> Math.<span style="color:#a6e22e">sqrt</span>(n); i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> 0) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;11 là số nguyên tố? &#34;</span> <span style="color:#f92672">+</span> isPrime(11));
+</span></span></code></pre></div><hr>
+<h3 id="-bài-3-kết-hợp-mảng-và-phương-thức">
+  🧩 Bài 3: Kết hợp mảng và phương thức
+  <a class="heading-link" href="#-b%c3%a0i-3-k%e1%ba%bft-h%e1%bb%a3p-m%e1%ba%a3ng-v%c3%a0-ph%c6%b0%c6%a1ng-th%e1%bb%a9c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">findMax</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> num : arr) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (num <span style="color:#f92672">&gt;</span> max) max <span style="color:#f92672">=</span> num;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> max;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> {3, 8, 2, 10, 5};
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Giá trị lớn nhất: &#34;</span> <span style="color:#f92672">+</span> findMax(data));
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="-kinh-nghiệm-học-tập">
+  📝 Kinh nghiệm học tập
+  <a class="heading-link" href="#-kinh-nghi%e1%bb%87m-h%e1%bb%8dc-t%e1%ba%adp">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>✍️ <strong>Viết hàm nhỏ, dễ đọc:</strong> Mỗi hàm chỉ nên làm một nhiệm vụ cụ thể.</li>
+<li>🔁 <strong>Tái sử dụng code:</strong> Khi cần chức năng tương tự, chỉ việc gọi lại hàm thay vì viết lại.</li>
+<li>🧩 <strong>Kết hợp với mảng:</strong> Viết hàm để tính tổng, trung bình, tìm max/min giúp code ngắn gọn hơn rất nhiều.</li>
+<li>💬 <strong>Đặt tên có ý nghĩa:</strong> Ví dụ <code>calculateSum()</code> dễ hiểu hơn <code>cs()</code>.</li>
+</ul>
+<hr>
+<h2 id="-khó-khăn--cách-khắc-phục">
+  ⚙️ Khó khăn &amp; Cách khắc phục
+  <a class="heading-link" href="#-kh%c3%b3-kh%c4%83n--c%c3%a1ch-kh%e1%ba%afc-ph%e1%bb%a5c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="-lẫn-lộn-giữa-tham-số-và-đối-số">
+  🧩 Lẫn lộn giữa tham số và đối số
+  <a class="heading-link" href="#-l%e1%ba%abn-l%e1%bb%99n-gi%e1%bb%afa-tham-s%e1%bb%91-v%c3%a0-%c4%91%e1%bb%91i-s%e1%bb%91">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Tham số (parameter)</strong>: biến được định nghĩa trong phương thức.</li>
+<li><strong>Đối số (argument)</strong>: giá trị thật được truyền vào khi gọi phương thức.<br>
+Ví dụ: <code>greet(String name)</code> → <code>name</code> là tham số, <code>greet(&quot;Minh&quot;)</code> → <code>&quot;Minh&quot;</code> là đối số.</li>
+</ul>
+<h3 id="-quên-return">
+  ❌ Quên <code>return</code>
+  <a class="heading-link" href="#-qu%c3%aan-return">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Mình từng gặp lỗi <em>“missing return statement”</em> vì khai báo kiểu trả về là <code>int</code> mà không có <code>return</code>.<br>
+Bây giờ mình luôn kiểm tra kỹ trước khi chạy.</p>
+<h3 id="-nhầm-phạm-vi-biến">
+  🧠 Nhầm phạm vi biến
+  <a class="heading-link" href="#-nh%e1%ba%a7m-ph%e1%ba%a1m-vi-bi%e1%ba%bfn">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Biến khai báo trong phương thức chỉ tồn tại trong hàm đó — không thể dùng ở ngoài.<br>
+Giờ mình luôn nhớ quy tắc <strong>“biến sống trong ngoặc nhọn của nó”</strong>.</p>
+<hr>
+<h2 id="-kết-quả--hướng-đi-bài-viết-tới">
+  ✅ Kết quả &amp; Hướng đi Bài viết tới
+  <a class="heading-link" href="#-k%e1%ba%bft-qu%e1%ba%a3--h%c6%b0%e1%bb%9bng-%c4%91i-b%c3%a0i-vi%e1%ba%bft-t%e1%bb%9bi">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="bài-viết-6--kết-quả">
+  Bài viết 6 — Kết quả
+  <a class="heading-link" href="#b%c3%a0i-vi%e1%ba%bft-6--k%e1%ba%bft-qu%e1%ba%a3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Hiểu rõ cấu trúc và cách hoạt động của phương thức trong Java.</li>
+<li>Biết cách truyền tham số, dùng <code>return</code> và kết hợp nhiều hàm với nhau.</li>
+<li>Ứng dụng phương thức vào bài toán thực tế: tính tổng, kiểm tra số, xử lý mảng.</li>
+</ul>
+<h3 id="bài-viết-7--kế-hoạch">
+  Bài viết 7 — Kế hoạch
+  <a class="heading-link" href="#b%c3%a0i-vi%e1%ba%bft-7--k%e1%ba%bf-ho%e1%ba%a1ch">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Học về <strong>xử lý ngoại lệ (Exception Handling)</strong> để làm cho chương trình ổn định hơn.</li>
+<li>Biết dùng <code>try</code>, <code>catch</code>, <code>throw</code> để bắt lỗi và xử lý hợp lý.</li>
+<li>Viết chương trình an toàn, tránh crash khi gặp dữ liệu sai.</li>
+</ul>
+<hr>
+<blockquote>
+<p>🌱 <em>Viết phương thức là bước đầu tiên để lập trình chuyên nghiệp — không chỉ biết code chạy được, mà còn biết sắp xếp, chia nhỏ và tái sử dụng chúng một cách thông minh.</em></p>
+</blockquote>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Nguyễn Đình Anh Minh 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

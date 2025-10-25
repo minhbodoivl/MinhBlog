@@ -1,0 +1,173 @@
+/* General styles */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+}
+
+/* Override hugo-coder container width for about page */
+.container {
+    max-width: 1000px !important;
+    width: 90% !important;
+    padding: 0 !important;
+}
+
+/* Fix article width for about page */
+article {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 1.1em;
+}
+
+/* Skills section */
+.skills-section {
+    margin: 2rem auto;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skill-category h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+}
+
+.skill-category li:before {
+    content: "•";
+    color: #4a90e2;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.2em;
+}
+
+.skill-category li strong {
+    font-weight: 600;
+    color: #0f66bd;
+}
+
+/* Certificates section */
+.certificates-section {
+    margin: 3rem auto;
+    text-align: center;
+    max-width: 1100px;
+}
+
+.certificates-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 2rem !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    overflow-x: auto; /* Cho phép cuộn ngang nếu không đủ chỗ */
+    scrollbar-width: thin;
+    scrollbar-color: #aaa transparent;
+}
+
+.certificates-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.certificates-grid::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+.certificate-card {
+    flex: 0 0 auto !important;
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+    height: 270px;
+    width: 200px; /* Chiều rộng cố định để xếp ngang */
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .certificates-section {
+        padding-bottom: 0 1rem;
+    }
+
+    .certificates-grid {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .container {
+        width: 95% !important;
+        padding: 0 10px;
+    }
+
+    .skill-category {
+        padding: 1rem;
+    }
+}
+
+.certificates-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 2rem !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+}
+
+.certificate-card {
+    flex: 0 0 auto !important;
+    display: inline-flex !important;
+}
+
