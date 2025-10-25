@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Điều Kiện on MinhBlog</title>
-    <link>https://example.org/tags/%C4%91i%E1%BB%81u-ki%E1%BB%87n/</link>
+    <link>https://minhbodoivl.github.io/MinhBlog/tags/%C4%91i%E1%BB%81u-ki%E1%BB%87n/</link>
     <description>Recent content in Điều Kiện on MinhBlog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/%C4%91i%E1%BB%81u-ki%E1%BB%87n/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/%C4%91i%E1%BB%81u-ki%E1%BB%87n/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bài viết 4 - Ôn tập điều kiện và vòng lặp trong Java</title>
-      <link>https://example.org/posts/post4/</link>
+      <link>https://minhbodoivl.github.io/MinhBlog/posts/post4/</link>
       <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/post4/</guid>
+      <guid>https://minhbodoivl.github.io/MinhBlog/posts/post4/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;“Bài viết này, mình quay lại với những khối kiến thức nền tảng – điều kiện và vòng lặp.&lt;br&gt;&#xA;Dù quen thuộc, nhưng khi học bằng Java, mọi thứ trở nên rõ ràng và chặt chẽ hơn.”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-mục-tiêu&#34;&gt;&#xD;&#xA;  🎯 Mục tiêu&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-m%e1%bb%a5c-ti%c3%aau&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ôn tập câu lệnh &lt;strong&gt;rẽ nhánh (&lt;code&gt;if&lt;/code&gt;, &lt;code&gt;else if&lt;/code&gt;, &lt;code&gt;switch&lt;/code&gt;)&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Thành thạo các &lt;strong&gt;vòng lặp (&lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&gt;, &lt;code&gt;do-while&lt;/code&gt;)&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Thực hành với những bài toán nhỏ như tính tổng, in bảng cửu chương, kiểm tra số nguyên tố.&lt;/li&gt;&#xA;&lt;li&gt;Hiểu rõ &lt;strong&gt;tư duy lặp&lt;/strong&gt; và &lt;strong&gt;điều kiện dừng&lt;/strong&gt; trong chương trình.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-cảm-nhận-đầu-tiên&#34;&gt;&#xD;&#xA;  💡 Cảm nhận đầu tiên&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Bài viết này giống như quay lại “gốc rễ” của lập trình – những cấu trúc điều khiển mà ngôn ngữ nào cũng có.&lt;br&gt;&#xA;Tuy nhiên, Java khiến mình thấy mọi thứ trở nên &lt;strong&gt;rõ ràng, chặt chẽ và có quy tắc hơn&lt;/strong&gt;.&lt;br&gt;&#xA;Mình đặc biệt thích cách Cisco thiết kế các ví dụ nhỏ: dễ hiểu, sát thực tế và giúp mình tự tay “cảm nhận” được vòng lặp hoạt động thế nào qua từng giá trị.&lt;/p&gt;</description>
     </item>
   </channel>

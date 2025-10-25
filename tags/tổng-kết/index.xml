@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tổng Kết on MinhBlog</title>
-    <link>https://example.org/tags/t%E1%BB%95ng-k%E1%BA%BFt/</link>
+    <link>https://minhbodoivl.github.io/MinhBlog/tags/t%E1%BB%95ng-k%E1%BA%BFt/</link>
     <description>Recent content in Tổng Kết on MinhBlog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/t%E1%BB%95ng-k%E1%BA%BFt/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/t%E1%BB%95ng-k%E1%BA%BFt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hành trình kết thúc Java Essentials – Cảm nghĩ và những gì học được</title>
-      <link>https://example.org/posts/post14/</link>
+      <link>https://minhbodoivl.github.io/MinhBlog/posts/post14/</link>
       <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/post14/</guid>
+      <guid>https://minhbodoivl.github.io/MinhBlog/posts/post14/</guid>
       <description>&lt;h2 id=&#34;-cảm-nghĩ-sau-khi-kết-thúc-khoá-học&#34;&gt;&#xD;&#xA;  🌱 Cảm nghĩ sau khi kết thúc khoá học&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-c%e1%ba%a3m-ngh%c4%a9-sau-khi-k%e1%ba%bft-th%c3%bac-kho%c3%a1-h%e1%bb%8dc&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;“Mỗi dòng code đều là một bước tiến, mỗi lỗi đều là một bài học.”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Khi nhìn lại hành trình 14 Bài viết vừa qua, mình thực sự cảm thấy &lt;strong&gt;vừa hứng thú vừa tự hào&lt;/strong&gt;: từ việc lần đầu nhìn thấy &lt;code&gt;Hello World&lt;/code&gt; cho tới việc xây dựng chương trình quản lý sinh viên, xử lý Collection, Exception, và lập trình hướng đối tượng nâng cao.&lt;/p&gt;</description>
     </item>
   </channel>
