@@ -2,213 +2,213 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on MinhBlog</title>
-    <link>https://minhbodoivl.github.io/MinhBlog/tags/</link>
+    <link>http://localhost:1313/MinhBlog/tags/</link>
     <description>Recent content in Tags on MinhBlog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/MinhBlog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cisco Networking Academy</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/cisco-networking-academy/</link>
+      <link>http://localhost:1313/MinhBlog/tags/cisco-networking-academy/</link>
       <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/cisco-networking-academy/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/cisco-networking-academy/</guid>
       <description></description>
     </item>
     <item>
       <title>Học Tập</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</link>
+      <link>http://localhost:1313/MinhBlog/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</link>
       <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/java/</link>
+      <link>http://localhost:1313/MinhBlog/tags/java/</link>
       <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/java/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/java/</guid>
       <description></description>
     </item>
     <item>
       <title>Lập Trình</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/l%E1%BA%ADp-tr%C3%ACnh/</link>
+      <link>http://localhost:1313/MinhBlog/tags/l%E1%BA%ADp-tr%C3%ACnh/</link>
       <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/l%E1%BA%ADp-tr%C3%ACnh/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/l%E1%BA%ADp-tr%C3%ACnh/</guid>
       <description></description>
     </item>
     <item>
       <title>Tổng Kết</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/t%E1%BB%95ng-k%E1%BA%BFt/</link>
+      <link>http://localhost:1313/MinhBlog/tags/t%E1%BB%95ng-k%E1%BA%BFt/</link>
       <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/t%E1%BB%95ng-k%E1%BA%BFt/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/t%E1%BB%95ng-k%E1%BA%BFt/</guid>
       <description></description>
     </item>
     <item>
       <title>Debugging</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/debugging/</link>
+      <link>http://localhost:1313/MinhBlog/tags/debugging/</link>
       <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/debugging/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/debugging/</guid>
       <description></description>
     </item>
     <item>
       <title>Exception Handling</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/exception-handling/</link>
+      <link>http://localhost:1313/MinhBlog/tags/exception-handling/</link>
       <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/exception-handling/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/exception-handling/</guid>
       <description></description>
     </item>
     <item>
       <title>Java Essentials 2</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/java-essentials-2/</link>
+      <link>http://localhost:1313/MinhBlog/tags/java-essentials-2/</link>
       <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/java-essentials-2/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/java-essentials-2/</guid>
       <description></description>
     </item>
     <item>
       <title>ArrayList</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/arraylist/</link>
+      <link>http://localhost:1313/MinhBlog/tags/arraylist/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/arraylist/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/arraylist/</guid>
       <description></description>
     </item>
     <item>
       <title>Collection</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/collection/</link>
+      <link>http://localhost:1313/MinhBlog/tags/collection/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/collection/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/collection/</guid>
       <description></description>
     </item>
     <item>
       <title>HashMap</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/hashmap/</link>
+      <link>http://localhost:1313/MinhBlog/tags/hashmap/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/hashmap/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/hashmap/</guid>
       <description></description>
     </item>
     <item>
       <title>BufferedReader</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/bufferedreader/</link>
+      <link>http://localhost:1313/MinhBlog/tags/bufferedreader/</link>
       <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/bufferedreader/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/bufferedreader/</guid>
       <description></description>
     </item>
     <item>
       <title>File I/O</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/file-i/o/</link>
+      <link>http://localhost:1313/MinhBlog/tags/file-i/o/</link>
       <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/file-i/o/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/file-i/o/</guid>
       <description></description>
     </item>
     <item>
       <title>FileWriter</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/filewriter/</link>
+      <link>http://localhost:1313/MinhBlog/tags/filewriter/</link>
       <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/filewriter/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/filewriter/</guid>
       <description></description>
     </item>
     <item>
       <title>Throw</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/throw/</link>
+      <link>http://localhost:1313/MinhBlog/tags/throw/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/throw/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/throw/</guid>
       <description></description>
     </item>
     <item>
       <title>Try Catch</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/try-catch/</link>
+      <link>http://localhost:1313/MinhBlog/tags/try-catch/</link>
       <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/try-catch/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/try-catch/</guid>
       <description></description>
     </item>
     <item>
       <title>Java Essentials 1</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/java-essentials-1/</link>
+      <link>http://localhost:1313/MinhBlog/tags/java-essentials-1/</link>
       <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/java-essentials-1/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/java-essentials-1/</guid>
       <description></description>
     </item>
     <item>
       <title>OOP</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/oop/</link>
+      <link>http://localhost:1313/MinhBlog/tags/oop/</link>
       <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/oop/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/oop/</guid>
       <description></description>
     </item>
     <item>
       <title>Polymorphism</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/polymorphism/</link>
+      <link>http://localhost:1313/MinhBlog/tags/polymorphism/</link>
       <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/polymorphism/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/polymorphism/</guid>
       <description></description>
     </item>
     <item>
       <title>Inheritance</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/inheritance/</link>
+      <link>http://localhost:1313/MinhBlog/tags/inheritance/</link>
       <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/inheritance/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/inheritance/</guid>
       <description></description>
     </item>
     <item>
       <title>Hàm</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/h%C3%A0m/</link>
+      <link>http://localhost:1313/MinhBlog/tags/h%C3%A0m/</link>
       <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/h%C3%A0m/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/h%C3%A0m/</guid>
       <description></description>
     </item>
     <item>
       <title>Method</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/method/</link>
+      <link>http://localhost:1313/MinhBlog/tags/method/</link>
       <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/method/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/method/</guid>
       <description></description>
     </item>
     <item>
       <title>Array</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/array/</link>
+      <link>http://localhost:1313/MinhBlog/tags/array/</link>
       <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/array/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/array/</guid>
       <description></description>
     </item>
     <item>
       <title>Mảng</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/m%E1%BA%A3ng/</link>
+      <link>http://localhost:1313/MinhBlog/tags/m%E1%BA%A3ng/</link>
       <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/m%E1%BA%A3ng/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/m%E1%BA%A3ng/</guid>
       <description></description>
     </item>
     <item>
       <title>Điều Kiện</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/%C4%91i%E1%BB%81u-ki%E1%BB%87n/</link>
+      <link>http://localhost:1313/MinhBlog/tags/%C4%91i%E1%BB%81u-ki%E1%BB%87n/</link>
       <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/%C4%91i%E1%BB%81u-ki%E1%BB%87n/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/%C4%91i%E1%BB%81u-ki%E1%BB%87n/</guid>
       <description></description>
     </item>
     <item>
       <title>Vòng Lặp</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/v%C3%B2ng-l%E1%BA%B7p/</link>
+      <link>http://localhost:1313/MinhBlog/tags/v%C3%B2ng-l%E1%BA%B7p/</link>
       <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/v%C3%B2ng-l%E1%BA%B7p/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/v%C3%B2ng-l%E1%BA%B7p/</guid>
       <description></description>
     </item>
     <item>
       <title>Lập Trình Hướng Đối Tượng</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng/</link>
+      <link>http://localhost:1313/MinhBlog/tags/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng/</link>
       <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng/</guid>
       <description></description>
     </item>
     <item>
       <title>Cisco</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/cisco/</link>
+      <link>http://localhost:1313/MinhBlog/tags/cisco/</link>
       <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/cisco/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/cisco/</guid>
       <description></description>
     </item>
     <item>
       <title>Mạng Máy Tính</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/tags/m%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh/</link>
+      <link>http://localhost:1313/MinhBlog/tags/m%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh/</link>
       <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/tags/m%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh/</guid>
+      <guid>http://localhost:1313/MinhBlog/tags/m%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh/</guid>
       <description></description>
     </item>
   </channel>
