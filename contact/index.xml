@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Liên hệ on MinhBlog</title>
-    <link>http://localhost:1313/MinhBlog/contact/</link>
+    <link>https://minhbodoivl.github.io/MinhBlog/contact/</link>
     <description>Recent content in Liên hệ on MinhBlog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/MinhBlog/contact/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://minhbodoivl.github.io/MinhBlog/contact/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

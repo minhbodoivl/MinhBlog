@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BufferedReader on MinhBlog</title>
-    <link>http://localhost:1313/MinhBlog/tags/bufferedreader/</link>
+    <link>https://minhbodoivl.github.io/MinhBlog/tags/bufferedreader/</link>
     <description>Recent content in BufferedReader on MinhBlog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 18 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/MinhBlog/tags/bufferedreader/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/bufferedreader/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bài viết 11 - Làm việc với File trong Java (File I/O)</title>
-      <link>http://localhost:1313/MinhBlog/posts/post11/</link>
+      <link>https://minhbodoivl.github.io/MinhBlog/posts/post11/</link>
       <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/MinhBlog/posts/post11/</guid>
+      <guid>https://minhbodoivl.github.io/MinhBlog/posts/post11/</guid>
       <description>&lt;h2 id=&#34;-bài-viết-11--làm-việc-với-file-trong-java-file-io&#34;&gt;&#xD;&#xA;  🗓️ Bài viết 11 — Làm việc với File trong Java (File I/O)&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-b%c3%a0i-vi%e1%ba%bft-11--l%c3%a0m-vi%e1%bb%87c-v%e1%bb%9bi-file-trong-java-file-io&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;“Lúc đầu mình nghĩ làm việc với file là phức tạp, nhưng thật ra Java đã có sẵn rất nhiều công cụ giúp việc đọc và ghi dữ liệu trở nên dễ dàng hơn.”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-mục-tiêu&#34;&gt;&#xD;&#xA;  🎯 Mục tiêu&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-m%e1%bb%a5c-ti%c3%aau&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hiểu khái niệm &lt;strong&gt;luồng dữ liệu (stream)&lt;/strong&gt; trong Java.&lt;/li&gt;&#xA;&lt;li&gt;Biết cách &lt;strong&gt;đọc và ghi file văn bản&lt;/strong&gt; bằng &lt;code&gt;FileReader&lt;/code&gt;, &lt;code&gt;BufferedReader&lt;/code&gt;, &lt;code&gt;FileWriter&lt;/code&gt;, &lt;code&gt;BufferedWriter&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Làm quen với &lt;strong&gt;xử lý ngoại lệ khi làm việc với file&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-1-giới-thiệu-về-file-io&#34;&gt;&#xD;&#xA;  📖 1. Giới thiệu về File I/O&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-1-gi%e1%bb%9bi-thi%e1%bb%87u-v%e1%bb%81-file-io&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;I/O (Input/Output)&lt;/strong&gt; nghĩa là &lt;strong&gt;đọc dữ liệu đầu vào (input)&lt;/strong&gt; và &lt;strong&gt;ghi dữ liệu đầu ra (output)&lt;/strong&gt;.&lt;br&gt;&#xA;Trong Java, I/O được thực hiện thông qua &lt;strong&gt;các luồng (streams)&lt;/strong&gt; – bạn có thể hiểu đơn giản là “dòng chảy dữ liệu” từ nguồn này sang nguồn khác.&lt;/p&gt;</description>
     </item>
   </channel>
