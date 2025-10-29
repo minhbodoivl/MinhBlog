@@ -1,19 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cisco on MinhBlog</title>
-    <link>https://minhbodoivl.github.io/MinhBlog/tags/cisco/</link>
-    <description>Recent content in Cisco on MinhBlog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 03 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/cisco/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Bài viết 1 - Lần đầu tiếp cận nền tảng Cisco Networking Academy</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/posts/post1/</link>
-      <pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/posts/post1/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;“Mọi hành trình đều bắt đầu từ bước đầu tiên — và đây là Bài viết đầu tiên của mình với Cisco Networking Academy.”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-mục-tiêu&#34;&gt;&#xD;&#xA;  🎯 Mục tiêu&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-m%e1%bb%a5c-ti%c3%aau&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Làm quen giao diện học tập (đăng nhập, cấu trúc module).&lt;/li&gt;&#xA;&lt;li&gt;Hiểu khái niệm mạng cơ bản: mạng máy tính là gì, thành phần mạng, cách hoạt động.&lt;/li&gt;&#xA;&lt;li&gt;Hoàn thành các bài học đầu và bài kiểm tra ngắn.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-ấn-tượng-đầu-tiên&#34;&gt;&#xD;&#xA;  💡 Ấn tượng đầu tiên&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-%e1%ba%a5n-t%c6%b0%e1%bb%a3ng-%c4%91%e1%ba%a7u-ti%c3%aan&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Ngay khi đăng nhập, mình ấn tượng với giao diện rõ ràng và trực quan — từng &lt;strong&gt;unit&lt;/strong&gt; nhỏ có video, tài liệu, bài quiz riêng.&lt;br&gt;&#xA;Điều đó giúp mình không bị choáng khi mới bắt đầu, dù vẫn hơi lo: &lt;em&gt;“Liệu mình có theo kịp không nhỉ?”&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cisco on MinhBlog</title><link>https://minhbodoivl.github.io/MinhBlog/tags/cisco/</link><description>Recent content in Cisco on MinhBlog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 03 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/cisco/index.xml" rel="self" type="application/rss+xml"/><item><title>Bài viết 1 - Lần đầu tiếp cận nền tảng Cisco Networking Academy</title><link>https://minhbodoivl.github.io/MinhBlog/posts/post1/</link><pubDate>Wed, 03 Sep 2025 00:00:00 +0000</pubDate><guid>https://minhbodoivl.github.io/MinhBlog/posts/post1/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“Mọi hành trình đều bắt đầu từ bước đầu tiên — và đây là Bài viết đầu tiên của mình với Cisco Networking Academy.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="-mục-tiêu"&gt;
+ 🎯 Mục tiêu
+ &lt;a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Làm quen giao diện học tập (đăng nhập, cấu trúc module).&lt;/li&gt;
+&lt;li&gt;Hiểu khái niệm mạng cơ bản: mạng máy tính là gì, thành phần mạng, cách hoạt động.&lt;/li&gt;
+&lt;li&gt;Hoàn thành các bài học đầu và bài kiểm tra ngắn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-ấn-tượng-đầu-tiên"&gt;
+ 💡 Ấn tượng đầu tiên
+ &lt;a class="heading-link" href="#-%e1%ba%a5n-t%c6%b0%e1%bb%a3ng-%c4%91%e1%ba%a7u-ti%c3%aan"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Ngay khi đăng nhập, mình ấn tượng với giao diện rõ ràng và trực quan — từng &lt;strong&gt;unit&lt;/strong&gt; nhỏ có video, tài liệu, bài quiz riêng.&lt;br&gt;
+Điều đó giúp mình không bị choáng khi mới bắt đầu, dù vẫn hơi lo: &lt;em&gt;“Liệu mình có theo kịp không nhỉ?”&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

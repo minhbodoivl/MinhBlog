@@ -1,33 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>OOP on MinhBlog</title>
-    <link>https://minhbodoivl.github.io/MinhBlog/tags/oop/</link>
-    <description>Recent content in OOP on MinhBlog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 16 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/oop/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Bài viết 3 - Khám phá lập trình hướng đối tượng trong Java (OOP)</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/posts/post3/</link>
-      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/posts/post3/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;“Bài viết này, mình chính thức bước vào thế giới của OOP – nơi mọi thứ trong lập trình bắt đầu trở nên có tổ chức và thực tế hơn.”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-mục-tiêu&#34;&gt;&#xD;&#xA;  🎯 Mục tiêu&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-m%e1%bb%a5c-ti%c3%aau&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hiểu rõ khái niệm &lt;strong&gt;lớp (class)&lt;/strong&gt; và &lt;strong&gt;đối tượng (object)&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Nắm được &lt;strong&gt;constructor&lt;/strong&gt;, &lt;strong&gt;method&lt;/strong&gt;, và &lt;strong&gt;tính đóng gói (encapsulation)&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Thực hành viết chương trình quản lý đơn giản bằng nhiều đối tượng.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-cảm-nhận-đầu-tiên&#34;&gt;&#xD;&#xA;  💡 Cảm nhận đầu tiên&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Ban đầu, mình hơi “choáng” với hàng loạt khái niệm mới: &lt;em&gt;class&lt;/em&gt;, &lt;em&gt;object&lt;/em&gt;, &lt;em&gt;method&lt;/em&gt;, &lt;em&gt;constructor&lt;/em&gt;, &lt;em&gt;encapsulation&lt;/em&gt;…&lt;br&gt;&#xA;Tuy nhiên, Cisco thiết kế bài học rất hợp lý — họ bắt đầu bằng ví dụ đời thường, như “một chiếc xe là một đối tượng có thuộc tính (màu, tốc độ) và hành vi (chạy, dừng)”.&lt;br&gt;&#xA;Nhờ vậy, mình nhanh chóng hiểu được:&lt;br&gt;&#xA;👉 &lt;strong&gt;Class giống như bản thiết kế&lt;/strong&gt;, còn &lt;strong&gt;Object là bản thể cụ thể được tạo ra từ bản thiết kế đó&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Bài viết 8 - Kế thừa (Inheritance) trong Java</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/posts/post8/</link>
-      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/posts/post8/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;“Từ đây, mình bắt đầu cảm thấy code Java không chỉ là câu lệnh, mà là những mối quan hệ giữa các đối tượng – y như trong đời sống.”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-mục-tiêu&#34;&gt;&#xD;&#xA;  🎯 Mục tiêu&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-m%e1%bb%a5c-ti%c3%aau&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hiểu &lt;strong&gt;khái niệm kế thừa (Inheritance)&lt;/strong&gt; trong lập trình hướng đối tượng.&lt;/li&gt;&#xA;&lt;li&gt;Biết cách &lt;strong&gt;tạo lớp con (subclass)&lt;/strong&gt; kế thừa thuộc tính &amp;amp; phương thức của lớp cha (superclass).&lt;/li&gt;&#xA;&lt;li&gt;Biết cách &lt;strong&gt;ghi đè phương thức (method overriding)&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Làm quen với &lt;strong&gt;từ khóa &lt;code&gt;super&lt;/code&gt; và &lt;code&gt;this&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-cảm-nhận-đầu-tiên&#34;&gt;&#xD;&#xA;  💡 Cảm nhận đầu tiên&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Bài viết này, mình nhận ra rằng &lt;strong&gt;kế thừa giúp tiết kiệm thời gian viết code&lt;/strong&gt; hơn rất nhiều.&lt;br&gt;&#xA;Thay vì viết lại toàn bộ thuộc tính và phương thức, mình chỉ cần &lt;strong&gt;kế thừa lớp có sẵn&lt;/strong&gt; rồi mở rộng thêm tính năng.&lt;br&gt;&#xA;Nó giống như việc “thêm tầng mới cho ngôi nhà đã có sẵn móng vững chắc”.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Bài viết 9 - Đa hình (Polymorphism) trong Java</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/posts/post9/</link>
-      <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/posts/post9/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;“Đa hình khiến mình nhận ra rằng một hành động có thể mang nhiều hình thái khác nhau – giống như con người, cùng nói ‘chạy’, nhưng chạy bộ, chạy xe, hay chạy deadline đều khác nhau.”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-mục-tiêu&#34;&gt;&#xD;&#xA;  🎯 Mục tiêu&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-m%e1%bb%a5c-ti%c3%aau&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hiểu khái niệm &lt;strong&gt;đa hình (Polymorphism)&lt;/strong&gt; trong Java.&lt;/li&gt;&#xA;&lt;li&gt;Phân biệt giữa &lt;strong&gt;compile-time&lt;/strong&gt; và &lt;strong&gt;runtime polymorphism&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Sử dụng &lt;strong&gt;ghi đè phương thức (method overriding)&lt;/strong&gt; và &lt;strong&gt;ép kiểu đối tượng (casting)&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Làm quen với &lt;strong&gt;abstract class&lt;/strong&gt; và &lt;strong&gt;interface&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-cảm-nhận-đầu-tiên&#34;&gt;&#xD;&#xA;  💡 Cảm nhận đầu tiên&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Bài viết này khá “mind-blowing” 🤯 — vì Java cho phép &lt;strong&gt;một đối tượng được tham chiếu bởi nhiều kiểu khác nhau&lt;/strong&gt;,&lt;br&gt;&#xA;và hành vi của nó &lt;strong&gt;phụ thuộc vào kiểu thực tế tại runtime&lt;/strong&gt; chứ không chỉ vào kiểu khai báo.&lt;br&gt;&#xA;Cisco minh họa bằng ví dụ cực hay:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OOP on MinhBlog</title><link>https://minhbodoivl.github.io/MinhBlog/tags/oop/</link><description>Recent content in OOP on MinhBlog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 16 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/oop/index.xml" rel="self" type="application/rss+xml"/><item><title>Bài viết 3 - Khám phá lập trình hướng đối tượng trong Java (OOP)</title><link>https://minhbodoivl.github.io/MinhBlog/posts/post3/</link><pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate><guid>https://minhbodoivl.github.io/MinhBlog/posts/post3/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“Bài viết này, mình chính thức bước vào thế giới của OOP – nơi mọi thứ trong lập trình bắt đầu trở nên có tổ chức và thực tế hơn.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="-mục-tiêu"&gt;
+ 🎯 Mục tiêu
+ &lt;a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hiểu rõ khái niệm &lt;strong&gt;lớp (class)&lt;/strong&gt; và &lt;strong&gt;đối tượng (object)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Nắm được &lt;strong&gt;constructor&lt;/strong&gt;, &lt;strong&gt;method&lt;/strong&gt;, và &lt;strong&gt;tính đóng gói (encapsulation)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Thực hành viết chương trình quản lý đơn giản bằng nhiều đối tượng.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-cảm-nhận-đầu-tiên"&gt;
+ 💡 Cảm nhận đầu tiên
+ &lt;a class="heading-link" href="#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Ban đầu, mình hơi “choáng” với hàng loạt khái niệm mới: &lt;em&gt;class&lt;/em&gt;, &lt;em&gt;object&lt;/em&gt;, &lt;em&gt;method&lt;/em&gt;, &lt;em&gt;constructor&lt;/em&gt;, &lt;em&gt;encapsulation&lt;/em&gt;…&lt;br&gt;
+Tuy nhiên, Cisco thiết kế bài học rất hợp lý — họ bắt đầu bằng ví dụ đời thường, như “một chiếc xe là một đối tượng có thuộc tính (màu, tốc độ) và hành vi (chạy, dừng)”.&lt;br&gt;
+Nhờ vậy, mình nhanh chóng hiểu được:&lt;br&gt;
+👉 &lt;strong&gt;Class giống như bản thiết kế&lt;/strong&gt;, còn &lt;strong&gt;Object là bản thể cụ thể được tạo ra từ bản thiết kế đó&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Bài viết 8 - Kế thừa (Inheritance) trong Java</title><link>https://minhbodoivl.github.io/MinhBlog/posts/post8/</link><pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate><guid>https://minhbodoivl.github.io/MinhBlog/posts/post8/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“Từ đây, mình bắt đầu cảm thấy code Java không chỉ là câu lệnh, mà là những mối quan hệ giữa các đối tượng – y như trong đời sống.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="-mục-tiêu"&gt;
+ 🎯 Mục tiêu
+ &lt;a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hiểu &lt;strong&gt;khái niệm kế thừa (Inheritance)&lt;/strong&gt; trong lập trình hướng đối tượng.&lt;/li&gt;
+&lt;li&gt;Biết cách &lt;strong&gt;tạo lớp con (subclass)&lt;/strong&gt; kế thừa thuộc tính &amp;amp; phương thức của lớp cha (superclass).&lt;/li&gt;
+&lt;li&gt;Biết cách &lt;strong&gt;ghi đè phương thức (method overriding)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Làm quen với &lt;strong&gt;từ khóa &lt;code&gt;super&lt;/code&gt; và &lt;code&gt;this&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-cảm-nhận-đầu-tiên"&gt;
+ 💡 Cảm nhận đầu tiên
+ &lt;a class="heading-link" href="#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Bài viết này, mình nhận ra rằng &lt;strong&gt;kế thừa giúp tiết kiệm thời gian viết code&lt;/strong&gt; hơn rất nhiều.&lt;br&gt;
+Thay vì viết lại toàn bộ thuộc tính và phương thức, mình chỉ cần &lt;strong&gt;kế thừa lớp có sẵn&lt;/strong&gt; rồi mở rộng thêm tính năng.&lt;br&gt;
+Nó giống như việc “thêm tầng mới cho ngôi nhà đã có sẵn móng vững chắc”.&lt;/p&gt;</description></item><item><title>Bài viết 9 - Đa hình (Polymorphism) trong Java</title><link>https://minhbodoivl.github.io/MinhBlog/posts/post9/</link><pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate><guid>https://minhbodoivl.github.io/MinhBlog/posts/post9/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“Đa hình khiến mình nhận ra rằng một hành động có thể mang nhiều hình thái khác nhau – giống như con người, cùng nói ‘chạy’, nhưng chạy bộ, chạy xe, hay chạy deadline đều khác nhau.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="-mục-tiêu"&gt;
+ 🎯 Mục tiêu
+ &lt;a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hiểu khái niệm &lt;strong&gt;đa hình (Polymorphism)&lt;/strong&gt; trong Java.&lt;/li&gt;
+&lt;li&gt;Phân biệt giữa &lt;strong&gt;compile-time&lt;/strong&gt; và &lt;strong&gt;runtime polymorphism&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Sử dụng &lt;strong&gt;ghi đè phương thức (method overriding)&lt;/strong&gt; và &lt;strong&gt;ép kiểu đối tượng (casting)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Làm quen với &lt;strong&gt;abstract class&lt;/strong&gt; và &lt;strong&gt;interface&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-cảm-nhận-đầu-tiên"&gt;
+ 💡 Cảm nhận đầu tiên
+ &lt;a class="heading-link" href="#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Bài viết này khá “mind-blowing” 🤯 — vì Java cho phép &lt;strong&gt;một đối tượng được tham chiếu bởi nhiều kiểu khác nhau&lt;/strong&gt;,&lt;br&gt;
+và hành vi của nó &lt;strong&gt;phụ thuộc vào kiểu thực tế tại runtime&lt;/strong&gt; chứ không chỉ vào kiểu khai báo.&lt;br&gt;
+Cisco minh họa bằng ví dụ cực hay:&lt;/p&gt;</description></item></channel></rss>

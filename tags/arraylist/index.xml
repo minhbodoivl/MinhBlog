@@ -1,19 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ArrayList on MinhBlog</title>
-    <link>https://minhbodoivl.github.io/MinhBlog/tags/arraylist/</link>
-    <description>Recent content in ArrayList on MinhBlog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 19 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/arraylist/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Bài viết 12 - Khám phá Collection Framework trong Java</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/posts/post12/</link>
-      <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/posts/post12/</guid>
-      <description>&lt;h2 id=&#34;-bài-viết-12--collection-framework&#34;&gt;&#xD;&#xA;  🗓️ Bài viết 12 — Collection Framework&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-b%c3%a0i-vi%e1%ba%bft-12--collection-framework&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;“Sau khi hiểu về lớp và đối tượng, mình nhận ra rằng việc lưu trữ và quản lý nhiều đối tượng cùng lúc mới là thử thách thật sự.”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-mục-tiêu&#34;&gt;&#xD;&#xA;  🎯 Mục tiêu&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-m%e1%bb%a5c-ti%c3%aau&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hiểu và sử dụng &lt;strong&gt;Collection Framework&lt;/strong&gt; trong Java.&lt;/li&gt;&#xA;&lt;li&gt;Nắm được các loại &lt;strong&gt;List, Set, Map&lt;/strong&gt; và cách duyệt qua chúng.&lt;/li&gt;&#xA;&lt;li&gt;Viết chương trình quản lý dữ liệu bằng &lt;code&gt;ArrayList&lt;/code&gt; và &lt;code&gt;HashMap&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-1-giới-thiệu-về-collection-framework&#34;&gt;&#xD;&#xA;  📚 1. Giới thiệu về Collection Framework&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-1-gi%e1%bb%9bi-thi%e1%bb%87u-v%e1%bb%81-collection-framework&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Collection Framework là tập hợp các lớp và interface hỗ trợ &lt;strong&gt;lưu trữ, sắp xếp, tìm kiếm, xóa&lt;/strong&gt; dữ liệu hiệu quả.&lt;br&gt;&#xA;Gồm 3 nhóm chính:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ArrayList on MinhBlog</title><link>https://minhbodoivl.github.io/MinhBlog/tags/arraylist/</link><description>Recent content in ArrayList on MinhBlog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 19 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/arraylist/index.xml" rel="self" type="application/rss+xml"/><item><title>Bài viết 12 - Khám phá Collection Framework trong Java</title><link>https://minhbodoivl.github.io/MinhBlog/posts/post12/</link><pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate><guid>https://minhbodoivl.github.io/MinhBlog/posts/post12/</guid><description>&lt;h2 id="-bài-viết-12--collection-framework"&gt;
+ 🗓️ Bài viết 12 — Collection Framework
+ &lt;a class="heading-link" href="#-b%c3%a0i-vi%e1%ba%bft-12--collection-framework"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“Sau khi hiểu về lớp và đối tượng, mình nhận ra rằng việc lưu trữ và quản lý nhiều đối tượng cùng lúc mới là thử thách thật sự.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id="-mục-tiêu"&gt;
+ 🎯 Mục tiêu
+ &lt;a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Hiểu và sử dụng &lt;strong&gt;Collection Framework&lt;/strong&gt; trong Java.&lt;/li&gt;
+&lt;li&gt;Nắm được các loại &lt;strong&gt;List, Set, Map&lt;/strong&gt; và cách duyệt qua chúng.&lt;/li&gt;
+&lt;li&gt;Viết chương trình quản lý dữ liệu bằng &lt;code&gt;ArrayList&lt;/code&gt; và &lt;code&gt;HashMap&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-1-giới-thiệu-về-collection-framework"&gt;
+ 📚 1. Giới thiệu về Collection Framework
+ &lt;a class="heading-link" href="#-1-gi%e1%bb%9bi-thi%e1%bb%87u-v%e1%bb%81-collection-framework"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Collection Framework là tập hợp các lớp và interface hỗ trợ &lt;strong&gt;lưu trữ, sắp xếp, tìm kiếm, xóa&lt;/strong&gt; dữ liệu hiệu quả.&lt;br&gt;
+Gồm 3 nhóm chính:&lt;/p&gt;</description></item></channel></rss>

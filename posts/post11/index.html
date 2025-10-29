@@ -1,433 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>
-  Bài viết 11 - Làm việc với File trong Java (File I/O) · MinhBlog
-</title>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light dark">
-
-
-
-
-<meta name="author" content="Nguyễn Đình Anh Minh">
-<meta name="description" content="Bài viết 11 của hành trình Java Essentials 2 – tìm hiểu cách đọc, ghi và xử lý dữ liệu trong file bằng Java.">
-<meta name="keywords" content="">
-
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Bài viết 11 - Làm việc với File trong Java (File I/O)">
-  <meta name="twitter:description" content="Bài viết 11 của hành trình Java Essentials 2 – tìm hiểu cách đọc, ghi và xử lý dữ liệu trong file bằng Java.">
-
-<meta property="og:url" content="https://minhbodoivl.github.io/MinhBlog/posts/post11/">
-  <meta property="og:site_name" content="MinhBlog">
-  <meta property="og:title" content="Bài viết 11 - Làm việc với File trong Java (File I/O)">
-  <meta property="og:description" content="Bài viết 11 của hành trình Java Essentials 2 – tìm hiểu cách đọc, ghi và xử lý dữ liệu trong file bằng Java.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-10-18T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-10-18T00:00:00+00:00">
-    <meta property="article:tag" content="Java">
-    <meta property="article:tag" content="Cisco Networking Academy">
-    <meta property="article:tag" content="Java Essentials 2">
-    <meta property="article:tag" content="File I/O">
-    <meta property="article:tag" content="BufferedReader">
-    <meta property="article:tag" content="FileWriter">
-
-
-
-
-<link rel="canonical" href="https://minhbodoivl.github.io/MinhBlog/posts/post11/">
-
-
-<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-
-
-  
-  
-  <link rel="stylesheet" href="/MinhBlog/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
-
-
-
-
-
-
-
-
- 
-
-
-
-
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
-
-
-
-
-
-</head>
-
-
-
-
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
-
-
-  <main class="wrapper">
-    <nav class="navigation">
-  <section class="container">
-    
-    <a class="navigation-title" href="https://minhbodoivl.github.io/MinhBlog/">
-      MinhBlog
-    </a>
-    
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/MinhBlog/about">Giới thiệu</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/MinhBlog/posts">Blog</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/MinhBlog/contact">Liên hệ</a>
-            </li>
-          
-        
-        
-      </ul>
-    
-  </section>
-</nav>
-
-
-    <div class="content">
-      
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="https://minhbodoivl.github.io/MinhBlog/posts/post11/">
-              Bài viết 11 - Làm việc với File trong Java (File I/O)
-            </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-              <time datetime="2025-10-18T00:00:00Z">
-                October 18, 2025
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              3-minute read
-            </span>
-          </div>
-          
-          
-          <div class="tags">
-  <i class="fa-solid fa-tag" aria-hidden="true"></i>
-    <span class="tag">
-      <a href="/MinhBlog/tags/java/">Java</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/cisco-networking-academy/">Cisco Networking Academy</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/java-essentials-2/">Java Essentials 2</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/file-i/o/">File I/O</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/bufferedreader/">BufferedReader</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/filewriter/">FileWriter</a>
-    </span></div>
-
-        </div>
-      </header>
-
-      <div class="post-content">
-        
-        <h2 id="-bài-viết-11--làm-việc-với-file-trong-java-file-io">
-  🗓️ Bài viết 11 — Làm việc với File trong Java (File I/O)
-  <a class="heading-link" href="#-b%c3%a0i-vi%e1%ba%bft-11--l%c3%a0m-vi%e1%bb%87c-v%e1%bb%9bi-file-trong-java-file-io">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h2>
-<blockquote>
-<p><em>“Lúc đầu mình nghĩ làm việc với file là phức tạp, nhưng thật ra Java đã có sẵn rất nhiều công cụ giúp việc đọc và ghi dữ liệu trở nên dễ dàng hơn.”</em></p>
-</blockquote>
-<hr>
-<h3 id="-mục-tiêu">
-  🎯 Mục tiêu
-  <a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<ul>
-<li>Hiểu khái niệm <strong>luồng dữ liệu (stream)</strong> trong Java.</li>
-<li>Biết cách <strong>đọc và ghi file văn bản</strong> bằng <code>FileReader</code>, <code>BufferedReader</code>, <code>FileWriter</code>, <code>BufferedWriter</code>.</li>
-<li>Làm quen với <strong>xử lý ngoại lệ khi làm việc với file</strong>.</li>
-</ul>
-<hr>
-<h3 id="-1-giới-thiệu-về-file-io">
-  📖 1. Giới thiệu về File I/O
-  <a class="heading-link" href="#-1-gi%e1%bb%9bi-thi%e1%bb%87u-v%e1%bb%81-file-io">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p><strong>I/O (Input/Output)</strong> nghĩa là <strong>đọc dữ liệu đầu vào (input)</strong> và <strong>ghi dữ liệu đầu ra (output)</strong>.<br>
-Trong Java, I/O được thực hiện thông qua <strong>các luồng (streams)</strong> – bạn có thể hiểu đơn giản là “dòng chảy dữ liệu” từ nguồn này sang nguồn khác.</p>
-<hr>
-<h3 id="-2-đọc-file-bằng-bufferedreader">
-  🧩 2. Đọc file bằng <code>BufferedReader</code>
-  <a class="heading-link" href="#-2-%c4%91%e1%bb%8dc-file-b%e1%ba%b1ng-bufferedreader">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.BufferedReader;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.FileReader;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReadFileExample</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>            BufferedReader reader <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> FileReader(<span style="color:#e6db74">&#34;data.txt&#34;</span>));
-</span></span><span style="display:flex;"><span>            String line;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> ((line <span style="color:#f92672">=</span> reader.<span style="color:#a6e22e">readLine</span>()) <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(line);
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>            reader.<span style="color:#a6e22e">close</span>();
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (IOException e) {
-</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi khi đọc file: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>📌 Ở đây:</p>
-<ul>
-<li><code>FileReader</code> giúp đọc file ký tự.</li>
-<li><code>BufferedReader</code> giúp đọc nhanh hơn bằng bộ nhớ đệm (buffer).</li>
-<li><code>readLine()</code> đọc từng dòng cho đến khi gặp <code>null</code> (hết file).</li>
-</ul>
-<hr>
-<h3 id="-3-ghi-file-bằng-bufferedwriter">
-  🧱 3. Ghi file bằng <code>BufferedWriter</code>
-  <a class="heading-link" href="#-3-ghi-file-b%e1%ba%b1ng-bufferedwriter">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.BufferedWriter;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.FileWriter;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WriteFileExample</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>            BufferedWriter writer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedWriter(<span style="color:#66d9ef">new</span> FileWriter(<span style="color:#e6db74">&#34;output.txt&#34;</span>));
-</span></span><span style="display:flex;"><span>            writer.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;Xin chào Java!&#34;</span>);
-</span></span><span style="display:flex;"><span>            writer.<span style="color:#a6e22e">newLine</span>();
-</span></span><span style="display:flex;"><span>            writer.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;Đây là dòng thứ hai.&#34;</span>);
-</span></span><span style="display:flex;"><span>            writer.<span style="color:#a6e22e">close</span>();
-</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Ghi file thành công!&#34;</span>);
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (IOException e) {
-</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi khi ghi file: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>🧠 <code>BufferedWriter</code> giúp ghi dữ liệu hiệu quả hơn nhờ bộ nhớ đệm.<br>
-Sau khi ghi xong, <strong>phải đóng luồng</strong> (<code>close()</code>) để dữ liệu được lưu lại.</p>
-<hr>
-<h3 id="-4-kết-hợp-đọc-và-ghi-file">
-  ⚙️ 4. Kết hợp đọc và ghi file
-  <a class="heading-link" href="#-4-k%e1%ba%bft-h%e1%bb%a3p-%c4%91%e1%bb%8dc-v%c3%a0-ghi-file">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p>Bài tập mình thực hành:</p>
-<ul>
-<li>Đọc dữ liệu từ file <code>input.txt</code>.</li>
-<li>Thêm một số dòng xử lý.</li>
-<li>Ghi kết quả sang <code>output.txt</code>.</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>    BufferedReader reader <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> FileReader(<span style="color:#e6db74">&#34;input.txt&#34;</span>));
-</span></span><span style="display:flex;"><span>    BufferedWriter writer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedWriter(<span style="color:#66d9ef">new</span> FileWriter(<span style="color:#e6db74">&#34;output.txt&#34;</span>));
-</span></span><span style="display:flex;"><span>    String line;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> ((line <span style="color:#f92672">=</span> reader.<span style="color:#a6e22e">readLine</span>()) <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>        writer.<span style="color:#a6e22e">write</span>(line.<span style="color:#a6e22e">toUpperCase</span>());
-</span></span><span style="display:flex;"><span>        writer.<span style="color:#a6e22e">newLine</span>();
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    reader.<span style="color:#a6e22e">close</span>();
-</span></span><span style="display:flex;"><span>    writer.<span style="color:#a6e22e">close</span>();
-</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (IOException e) {
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>💡 Nhờ đó, mình hiểu rõ hơn <strong>luồng vào – luồng ra</strong>, và cách chúng phối hợp để xử lý file.</p>
-<hr>
-<h3 id="-5-sử-dụng-try-with-resources">
-  🧠 5. Sử dụng <code>try-with-resources</code>
-  <a class="heading-link" href="#-5-s%e1%bb%ad-d%e1%bb%a5ng-try-with-resources">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p>Từ Java 7, ta có cú pháp mới giúp <strong>tự động đóng file</strong> sau khi dùng xong:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> (BufferedReader reader <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> FileReader(<span style="color:#e6db74">&#34;data.txt&#34;</span>))) {
-</span></span><span style="display:flex;"><span>    String line;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> ((line <span style="color:#f92672">=</span> reader.<span style="color:#a6e22e">readLine</span>()) <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(line);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (IOException e) {
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>👉 Giúp code <strong>ngắn gọn và an toàn hơn</strong> — không cần gọi <code>close()</code> thủ công.</p>
-<hr>
-<h3 id="-tổng-kết-bài-viết-11">
-  🧭 Tổng kết Bài viết 11
-  <a class="heading-link" href="#-t%e1%bb%95ng-k%e1%ba%bft-b%c3%a0i-vi%e1%ba%bft-11">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<ul>
-<li>Hiểu và áp dụng <strong>I/O stream</strong> trong Java.</li>
-<li>Biết cách <strong>đọc và ghi file</strong> bằng <code>BufferedReader</code> và <code>BufferedWriter</code>.</li>
-<li>Làm quen với cú pháp <strong>try-with-resources</strong> để quản lý tài nguyên hiệu quả.</li>
-</ul>
-<blockquote>
-<p>✨ Sang <strong>Bài viết 12</strong>, mình sẽ học về <strong>Collection Framework (ArrayList, HashMap, Set)</strong> – những cấu trúc dữ liệu mạnh mẽ giúp quản lý tập hợp đối tượng dễ dàng hơn.</p>
-</blockquote>
-
-      </div>
-
-
-      <footer>
-        
-
-
-        
-        
-        
-        
-        
-        
-        
-      </footer>
-    </article>
-
-    
-  </section>
-
-    </div>
-
-    <footer class="footer">
-  <section class="container">
-    ©
-    
-    2025
-     Nguyễn Đình Anh Minh 
-    ·
-    
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
-    
-  </section>
-</footer>
-
-  </main>
-
-  
-
-  
-  
-  <script src="/MinhBlog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</body>
-</html>
+<!doctype html><html lang=en><head><title>Bài viết 11 - Làm việc với File trong Java (File I/O) · MinhBlog</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Nguyễn Đình Anh Minh"><meta name=description content="Bài viết 11 của hành trình Java Essentials 2 – tìm hiểu cách đọc, ghi và xử lý dữ liệu trong file bằng Java."><meta name=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="Bài viết 11 - Làm việc với File trong Java (File I/O)"><meta name=twitter:description content="Bài viết 11 của hành trình Java Essentials 2 – tìm hiểu cách đọc, ghi và xử lý dữ liệu trong file bằng Java."><meta property="og:url" content="https://minhbodoivl.github.io/MinhBlog/posts/post11/"><meta property="og:site_name" content="MinhBlog"><meta property="og:title" content="Bài viết 11 - Làm việc với File trong Java (File I/O)"><meta property="og:description" content="Bài viết 11 của hành trình Java Essentials 2 – tìm hiểu cách đọc, ghi và xử lý dữ liệu trong file bằng Java."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-10-18T00:00:00+00:00"><meta property="article:modified_time" content="2025-10-18T00:00:00+00:00"><meta property="article:tag" content="Java"><meta property="article:tag" content="Cisco Networking Academy"><meta property="article:tag" content="Java Essentials 2"><meta property="article:tag" content="File I/O"><meta property="article:tag" content="BufferedReader"><meta property="article:tag" content="FileWriter"><link rel=canonical href=https://minhbodoivl.github.io/MinhBlog/posts/post11/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/MinhBlog/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-light"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://minhbodoivl.github.io/MinhBlog/>MinhBlog
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/MinhBlog/about>Giới thiệu</a></li><li class=navigation-item><a class=navigation-link href=/MinhBlog/posts>Blog</a></li><li class=navigation-item><a class=navigation-link href=/MinhBlog/contact>Liên hệ</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://minhbodoivl.github.io/MinhBlog/posts/post11/>Bài viết 11 - Làm việc với File trong Java (File I/O)</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2025-10-18T00:00:00Z>October 18, 2025
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+3-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/MinhBlog/tags/java/>Java</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/cisco-networking-academy/>Cisco Networking Academy</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/java-essentials-2/>Java Essentials 2</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/file-i/o/>File I/O</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/bufferedreader/>BufferedReader</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/filewriter/>FileWriter</a></span></div></div></header><div class=post-content><h2 id=-bài-viết-11--làm-việc-với-file-trong-java-file-io>🗓️ Bài viết 11 — Làm việc với File trong Java (File I/O)
+<a class=heading-link href=#-b%c3%a0i-vi%e1%ba%bft-11--l%c3%a0m-vi%e1%bb%87c-v%e1%bb%9bi-file-trong-java-file-io><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><blockquote><p><em>“Lúc đầu mình nghĩ làm việc với file là phức tạp, nhưng thật ra Java đã có sẵn rất nhiều công cụ giúp việc đọc và ghi dữ liệu trở nên dễ dàng hơn.”</em></p></blockquote><hr><h3 id=-mục-tiêu>🎯 Mục tiêu
+<a class=heading-link href=#-m%e1%bb%a5c-ti%c3%aau><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li>Hiểu khái niệm <strong>luồng dữ liệu (stream)</strong> trong Java.</li><li>Biết cách <strong>đọc và ghi file văn bản</strong> bằng <code>FileReader</code>, <code>BufferedReader</code>, <code>FileWriter</code>, <code>BufferedWriter</code>.</li><li>Làm quen với <strong>xử lý ngoại lệ khi làm việc với file</strong>.</li></ul><hr><h3 id=-1-giới-thiệu-về-file-io>📖 1. Giới thiệu về File I/O
+<a class=heading-link href=#-1-gi%e1%bb%9bi-thi%e1%bb%87u-v%e1%bb%81-file-io><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p><strong>I/O (Input/Output)</strong> nghĩa là <strong>đọc dữ liệu đầu vào (input)</strong> và <strong>ghi dữ liệu đầu ra (output)</strong>.<br>Trong Java, I/O được thực hiện thông qua <strong>các luồng (streams)</strong> – bạn có thể hiểu đơn giản là “dòng chảy dữ liệu” từ nguồn này sang nguồn khác.</p><hr><h3 id=-2-đọc-file-bằng-bufferedreader>🧩 2. Đọc file bằng <code>BufferedReader</code>
+<a class=heading-link href=#-2-%c4%91%e1%bb%8dc-file-b%e1%ba%b1ng-bufferedreader><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>import</span> java.io.BufferedReader;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.io.FileReader;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.io.IOException;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ReadFileExample</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>            BufferedReader reader <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> BufferedReader(<span style=color:#66d9ef>new</span> FileReader(<span style=color:#e6db74>&#34;data.txt&#34;</span>));
+</span></span><span style=display:flex><span>            String line;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>while</span> ((line <span style=color:#f92672>=</span> reader.<span style=color:#a6e22e>readLine</span>()) <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>                System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(line);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>            reader.<span style=color:#a6e22e>close</span>();
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>catch</span> (IOException e) {
+</span></span><span style=display:flex><span>            System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Lỗi khi đọc file: &#34;</span> <span style=color:#f92672>+</span> e.<span style=color:#a6e22e>getMessage</span>());
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>📌 Ở đây:</p><ul><li><code>FileReader</code> giúp đọc file ký tự.</li><li><code>BufferedReader</code> giúp đọc nhanh hơn bằng bộ nhớ đệm (buffer).</li><li><code>readLine()</code> đọc từng dòng cho đến khi gặp <code>null</code> (hết file).</li></ul><hr><h3 id=-3-ghi-file-bằng-bufferedwriter>🧱 3. Ghi file bằng <code>BufferedWriter</code>
+<a class=heading-link href=#-3-ghi-file-b%e1%ba%b1ng-bufferedwriter><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>import</span> java.io.BufferedWriter;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.io.FileWriter;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.io.IOException;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>WriteFileExample</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>            BufferedWriter writer <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> BufferedWriter(<span style=color:#66d9ef>new</span> FileWriter(<span style=color:#e6db74>&#34;output.txt&#34;</span>));
+</span></span><span style=display:flex><span>            writer.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#34;Xin chào Java!&#34;</span>);
+</span></span><span style=display:flex><span>            writer.<span style=color:#a6e22e>newLine</span>();
+</span></span><span style=display:flex><span>            writer.<span style=color:#a6e22e>write</span>(<span style=color:#e6db74>&#34;Đây là dòng thứ hai.&#34;</span>);
+</span></span><span style=display:flex><span>            writer.<span style=color:#a6e22e>close</span>();
+</span></span><span style=display:flex><span>            System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Ghi file thành công!&#34;</span>);
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>catch</span> (IOException e) {
+</span></span><span style=display:flex><span>            System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Lỗi khi ghi file: &#34;</span> <span style=color:#f92672>+</span> e.<span style=color:#a6e22e>getMessage</span>());
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>🧠 <code>BufferedWriter</code> giúp ghi dữ liệu hiệu quả hơn nhờ bộ nhớ đệm.<br>Sau khi ghi xong, <strong>phải đóng luồng</strong> (<code>close()</code>) để dữ liệu được lưu lại.</p><hr><h3 id=-4-kết-hợp-đọc-và-ghi-file>⚙️ 4. Kết hợp đọc và ghi file
+<a class=heading-link href=#-4-k%e1%ba%bft-h%e1%bb%a3p-%c4%91%e1%bb%8dc-v%c3%a0-ghi-file><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Bài tập mình thực hành:</p><ul><li>Đọc dữ liệu từ file <code>input.txt</code>.</li><li>Thêm một số dòng xử lý.</li><li>Ghi kết quả sang <code>output.txt</code>.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>    BufferedReader reader <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> BufferedReader(<span style=color:#66d9ef>new</span> FileReader(<span style=color:#e6db74>&#34;input.txt&#34;</span>));
+</span></span><span style=display:flex><span>    BufferedWriter writer <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> BufferedWriter(<span style=color:#66d9ef>new</span> FileWriter(<span style=color:#e6db74>&#34;output.txt&#34;</span>));
+</span></span><span style=display:flex><span>    String line;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> ((line <span style=color:#f92672>=</span> reader.<span style=color:#a6e22e>readLine</span>()) <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        writer.<span style=color:#a6e22e>write</span>(line.<span style=color:#a6e22e>toUpperCase</span>());
+</span></span><span style=display:flex><span>        writer.<span style=color:#a6e22e>newLine</span>();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    reader.<span style=color:#a6e22e>close</span>();
+</span></span><span style=display:flex><span>    writer.<span style=color:#a6e22e>close</span>();
+</span></span><span style=display:flex><span>} <span style=color:#66d9ef>catch</span> (IOException e) {
+</span></span><span style=display:flex><span>    System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Lỗi: &#34;</span> <span style=color:#f92672>+</span> e.<span style=color:#a6e22e>getMessage</span>());
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>💡 Nhờ đó, mình hiểu rõ hơn <strong>luồng vào – luồng ra</strong>, và cách chúng phối hợp để xử lý file.</p><hr><h3 id=-5-sử-dụng-try-with-resources>🧠 5. Sử dụng <code>try-with-resources</code>
+<a class=heading-link href=#-5-s%e1%bb%ad-d%e1%bb%a5ng-try-with-resources><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Từ Java 7, ta có cú pháp mới giúp <strong>tự động đóng file</strong> sau khi dùng xong:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>try</span> (BufferedReader reader <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> BufferedReader(<span style=color:#66d9ef>new</span> FileReader(<span style=color:#e6db74>&#34;data.txt&#34;</span>))) {
+</span></span><span style=display:flex><span>    String line;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> ((line <span style=color:#f92672>=</span> reader.<span style=color:#a6e22e>readLine</span>()) <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(line);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>} <span style=color:#66d9ef>catch</span> (IOException e) {
+</span></span><span style=display:flex><span>    System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Lỗi: &#34;</span> <span style=color:#f92672>+</span> e.<span style=color:#a6e22e>getMessage</span>());
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>👉 Giúp code <strong>ngắn gọn và an toàn hơn</strong> — không cần gọi <code>close()</code> thủ công.</p><hr><h3 id=-tổng-kết-bài-viết-11>🧭 Tổng kết Bài viết 11
+<a class=heading-link href=#-t%e1%bb%95ng-k%e1%ba%bft-b%c3%a0i-vi%e1%ba%bft-11><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li>Hiểu và áp dụng <strong>I/O stream</strong> trong Java.</li><li>Biết cách <strong>đọc và ghi file</strong> bằng <code>BufferedReader</code> và <code>BufferedWriter</code>.</li><li>Làm quen với cú pháp <strong>try-with-resources</strong> để quản lý tài nguyên hiệu quả.</li></ul><blockquote><p>✨ Sang <strong>Bài viết 12</strong>, mình sẽ học về <strong>Collection Framework (ArrayList, HashMap, Set)</strong> – những cấu trúc dữ liệu mạnh mẽ giúp quản lý tập hợp đối tượng dễ dàng hơn.</p></blockquote></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2025
+Nguyễn Đình Anh Minh
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/MinhBlog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>

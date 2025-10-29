@@ -1,446 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>
-  Bài viết 2 – Bước đầu vào thế giới lập trình hướng đối tượng · MinhBlog
-</title>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light dark">
-
-
-
-
-<meta name="author" content="Nguyễn Đình Anh Minh">
-<meta name="description" content="Trải nghiệm Bài viết 2 học Java Essentials 1 trên Cisco Networking Academy – hiểu về cú pháp Java, biến, kiểu dữ liệu và lập trình hướng đối tượng.">
-<meta name="keywords" content="">
-
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Bài viết 2 – Bước đầu vào thế giới lập trình hướng đối tượng">
-  <meta name="twitter:description" content="Trải nghiệm Bài viết 2 học Java Essentials 1 trên Cisco Networking Academy – hiểu về cú pháp Java, biến, kiểu dữ liệu và lập trình hướng đối tượng.">
-
-<meta property="og:url" content="https://minhbodoivl.github.io/MinhBlog/posts/post2/">
-  <meta property="og:site_name" content="MinhBlog">
-  <meta property="og:title" content="Bài viết 2 – Bước đầu vào thế giới lập trình hướng đối tượng">
-  <meta property="og:description" content="Trải nghiệm Bài viết 2 học Java Essentials 1 trên Cisco Networking Academy – hiểu về cú pháp Java, biến, kiểu dữ liệu và lập trình hướng đối tượng.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-09-10T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-09-10T00:00:00+00:00">
-    <meta property="article:tag" content="Java">
-    <meta property="article:tag" content="Cisco Networking Academy">
-    <meta property="article:tag" content="Lập Trình Hướng Đối Tượng">
-    <meta property="article:tag" content="Java Essentials 1">
-
-
-
-
-<link rel="canonical" href="https://minhbodoivl.github.io/MinhBlog/posts/post2/">
-
-
-<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-
-
-  
-  
-  <link rel="stylesheet" href="/MinhBlog/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
-
-
-
-
-
-
-
-
- 
-
-
-
-
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
-
-
-
-
-
-</head>
-
-
-
-
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
-
-
-  <main class="wrapper">
-    <nav class="navigation">
-  <section class="container">
-    
-    <a class="navigation-title" href="https://minhbodoivl.github.io/MinhBlog/">
-      MinhBlog
-    </a>
-    
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/MinhBlog/about">Giới thiệu</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/MinhBlog/posts">Blog</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/MinhBlog/contact">Liên hệ</a>
-            </li>
-          
-        
-        
-      </ul>
-    
-  </section>
-</nav>
-
-
-    <div class="content">
-      
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="https://minhbodoivl.github.io/MinhBlog/posts/post2/">
-              Bài viết 2 – Bước đầu vào thế giới lập trình hướng đối tượng
-            </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-              <time datetime="2025-09-10T00:00:00Z">
-                September 10, 2025
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              4-minute read
-            </span>
-          </div>
-          
-          
-          <div class="tags">
-  <i class="fa-solid fa-tag" aria-hidden="true"></i>
-    <span class="tag">
-      <a href="/MinhBlog/tags/java/">Java</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/cisco-networking-academy/">Cisco Networking Academy</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng/">Lập Trình Hướng Đối Tượng</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/java-essentials-1/">Java Essentials 1</a>
-    </span></div>
-
-        </div>
-      </header>
-
-      <div class="post-content">
-        
-        <blockquote>
-<p><em>“Bài viết thứ hai, mình chính thức bước vào thế giới lập trình, nơi những dòng code đầu tiên bắt đầu có ý nghĩa.”</em></p>
-</blockquote>
-<hr>
-<h2 id="-mục-tiêu">
-  🎯 Mục tiêu
-  <a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h2>
-<ul>
-<li>Làm quen với <strong>Java Essentials 1</strong>.</li>
-<li>Hiểu cú pháp cơ bản: biến, kiểu dữ liệu, cấu trúc chương trình.</li>
-<li>Thực hành viết chương trình, vòng lặp, và điều kiện.</li>
-</ul>
-<hr>
-<h2 id="-cảm-nhận-đầu-tiên">
-  💡 Cảm nhận đầu tiên
-  <a class="heading-link" href="#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h2>
-<p>Sau Bài viết đầu tiên làm quen với <strong>Networking Basics</strong>, mình chính thức bước sang giai đoạn thứ hai của khoá học tại <strong>Cisco Networking Academy</strong> – đó là <strong>Java Essentials 1</strong>.<br>
-Đây cũng là Bài viết đầu tiên mình thực sự <em>code nhiều</em>, và bắt đầu cảm nhận “hơi thở” của ngôn ngữ lập trình Java.</p>
-<p>Trước đây mình đã nghe nhiều về Java – một ngôn ngữ mạnh mẽ, phổ biến, dùng từ ứng dụng desktop đến Android. Nhưng khi bắt đầu học chính thức, điều đầu tiên mình cảm thấy là <strong>Java chặt chẽ và có quy tắc rõ ràng</strong>.<br>
-Mọi thứ từ cách đặt tên lớp, dấu ngoặc nhọn, đến khai báo biến đều phải chính xác.</p>
-<p>Điểm mình thích là môi trường học của Cisco có <strong>IDE trực tuyến</strong>, cho phép viết – biên dịch – chạy chương trình ngay trên trình duyệt, không cần cài đặt.<br>
-Điều này giúp mình tập trung vào việc học ngôn ngữ hơn là cài công cụ.</p>
-<hr>
-<h2 id="-kiến-thức-học-được">
-  📚 Kiến thức học được
-  <a class="heading-link" href="#-ki%e1%ba%bfn-th%e1%bb%a9c-h%e1%bb%8dc-%c4%91%c6%b0%e1%bb%a3c">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h2>
-<h3 id="-cấu-trúc-chương-trình-java">
-  🔸 Cấu trúc chương trình Java
-  <a class="heading-link" href="#-c%e1%ba%a5u-tr%c3%bac-ch%c6%b0%c6%a1ng-tr%c3%acnh-java">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p>Một chương trình Java luôn bắt đầu bằng <strong>class</strong> chứa hàm <code>main()</code>, ví dụ:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloWorld</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xin chào thế giới Java!&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>💬 Mình hiểu được rằng mọi thứ trong Java đều phải nằm trong một lớp, và <code>main()</code> là điểm bắt đầu của chương trình.</p>
-<h4 id="-biến-và-kiểu-dữ-liệu">
-  <strong>🔸 Biến và kiểu dữ liệu</strong>
-  <a class="heading-link" href="#-bi%e1%ba%bfn-v%c3%a0-ki%e1%bb%83u-d%e1%bb%af-li%e1%bb%87u">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h4>
-<p>Mình được học cách khai báo và sử dụng các kiểu dữ liệu cơ bản:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> tuoi <span style="color:#f92672">=</span> 20;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span> diemTB <span style="color:#f92672">=</span> 8.<span style="color:#a6e22e">5</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> kyTu <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> daTotNghiep <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>String ten <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Minh Coder&#34;</span>;
-</span></span></code></pre></div><p>Cảm giác khá dễ hiểu, vì cú pháp Java rõ ràng, gần giống C#, nhưng có quy tắc nghiêm ngặt hơn.</p>
-<h4 id="-toán-tử-và-điều-kiện">
-  <strong>🔸 Toán tử và điều kiện</strong>
-  <a class="heading-link" href="#-to%c3%a1n-t%e1%bb%ad-v%c3%a0-%c4%91i%e1%bb%81u-ki%e1%bb%87n">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h4>
-<p>Các bài tập giúp mình ôn lại kiến thức logic như <code>if</code>, <code>else</code>, <code>switch</code>, toán tử so sánh (<code>==,</code> <code>!=,</code> <code>&gt;,</code> <code>&lt;</code>) và toán tử logic (<code>&amp;&amp;</code>, <code>||</code>).
-Ví dụ bài tập tính điểm trung bình và phân loại học sinh:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (diemTB <span style="color:#f92672">&gt;=</span> 8.<span style="color:#a6e22e">0</span>)
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Giỏi&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (diemTB <span style="color:#f92672">&gt;=</span> 6.<span style="color:#a6e22e">5</span>)
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Khá&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Trung bình&#34;</span>);
-</span></span></code></pre></div><h4 id="-vòng-lặp-trong-java">
-  <strong>🔸 Vòng lặp trong Java</strong>
-  <a class="heading-link" href="#-v%c3%b2ng-l%e1%ba%b7p-trong-java">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h4>
-<p>Mình luyện tập viết các vòng lặp <code>for</code>, <code>while</code>, <code>do-while</code> để tính tổng, in bảng cửu chương, hoặc kiểm tra số nguyên tố.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Scanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
-</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>(<span style="color:#e6db74">&#34;Nhập n: &#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextInt</span>();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> 0;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>    sum <span style="color:#f92672">+=</span> i;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tổng từ 1 đến &#34;</span> <span style="color:#f92672">+</span> n <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; là: &#34;</span> <span style="color:#f92672">+</span> sum);
-</span></span></code></pre></div><h3 id="-kinh-nghiệm-học-tập">
-  📝 Kinh nghiệm học tập
-  <a class="heading-link" href="#-kinh-nghi%e1%bb%87m-h%e1%bb%8dc-t%e1%ba%adp">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<ul>
-<li>
-<p>⏰ <strong>Chia nhỏ mục tiêu mỗi ngày:</strong> chỉ học 1–2 module, tránh học dồn vì Java cần thời gian để “ngấm”.</p>
-</li>
-<li>
-<p>✍️ <strong>Tự gõ code, không copy:</strong> giúp nhớ cú pháp lâu hơn và phát hiện lỗi dễ hơn.</p>
-</li>
-<li>
-<p>💬 <strong>Dùng comment để hiểu code:</strong> tập thói quen thêm chú thích <code>//</code> hoặc <code>/* ... */.</code></p>
-</li>
-<li>
-<p>💡 <strong>Thực hành thêm ngoài bài học:</strong> sau mỗi module, mình tự nghĩ thêm 1–2 bài tập nhỏ như:</p>
-<ul>
-<li>Viết chương trình đổi nhiệt độ C ↔ F.</li>
-<li>Tính tổng các số lẻ từ 1 đến 100.</li>
-<li>In tam giác sao theo chiều cao nhập vào.</li>
-</ul>
-</li>
-</ul>
-<h3 id="-khó-khăn--cách-vượt-qua">
-  ⚙️ Khó khăn &amp; Cách vượt qua
-  <a class="heading-link" href="#-kh%c3%b3-kh%c4%83n--c%c3%a1ch-v%c6%b0%e1%bb%a3t-qua">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p><strong>🧩 Lỗi cú pháp liên tục</strong></p>
-<ul>
-<li><strong>Vấn đề:</strong> chỉ thiếu dấu {} hoặc ; là lỗi.</li>
-<li><strong>Giải pháp:</strong> học cách đọc lỗi terminal để sửa nhanh.</li>
-</ul>
-<p><strong>🧠 Nhớ quy tắc đặt tên</strong></p>
-<ul>
-<li><strong>Vấn đề:</strong> lớp viết hoa chữ cái đầu (<code>StudentInfo</code>), biến viết thường (<code>studentAge</code>).</li>
-<li><strong>Giải pháp:</strong> lặp lại quy tắc mỗi khi viết class mới.</li>
-</ul>
-<p><strong>💭 Khái niệm “class” và “object”</strong></p>
-<ul>
-<li><strong>Vấn đề:</strong> còn khá trừu tượng.</li>
-<li><strong>Giải pháp:</strong> chuẩn bị tinh thần để hiểu kỹ hơn trong Bài viết 3, khi học lập trình hướng đối tượng (OOP).</li>
-</ul>
-<h3 id="-kết-quả--kế-hoạch">
-  ✅ Kết quả &amp; Kế hoạch
-  <a class="heading-link" href="#-k%e1%ba%bft-qu%e1%ba%a3--k%e1%ba%bf-ho%e1%ba%a1ch">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p><strong>Bài viết 2 — Kết quả</strong></p>
-<ul>
-<li>Hoàn thành khoảng <strong>50% nội dung Java Essentials 1.</strong></li>
-</ul>
-<p>-Nắm được:</p>
-<pre><code>- Cấu trúc chương trình Java.
+<!doctype html><html lang=en><head><title>Bài viết 2 – Bước đầu vào thế giới lập trình hướng đối tượng · MinhBlog</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Nguyễn Đình Anh Minh"><meta name=description content="Trải nghiệm Bài viết 2 học Java Essentials 1 trên Cisco Networking Academy – hiểu về cú pháp Java, biến, kiểu dữ liệu và lập trình hướng đối tượng."><meta name=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="Bài viết 2 – Bước đầu vào thế giới lập trình hướng đối tượng"><meta name=twitter:description content="Trải nghiệm Bài viết 2 học Java Essentials 1 trên Cisco Networking Academy – hiểu về cú pháp Java, biến, kiểu dữ liệu và lập trình hướng đối tượng."><meta property="og:url" content="https://minhbodoivl.github.io/MinhBlog/posts/post2/"><meta property="og:site_name" content="MinhBlog"><meta property="og:title" content="Bài viết 2 – Bước đầu vào thế giới lập trình hướng đối tượng"><meta property="og:description" content="Trải nghiệm Bài viết 2 học Java Essentials 1 trên Cisco Networking Academy – hiểu về cú pháp Java, biến, kiểu dữ liệu và lập trình hướng đối tượng."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-09-10T00:00:00+00:00"><meta property="article:modified_time" content="2025-09-10T00:00:00+00:00"><meta property="article:tag" content="Java"><meta property="article:tag" content="Cisco Networking Academy"><meta property="article:tag" content="Lập Trình Hướng Đối Tượng"><meta property="article:tag" content="Java Essentials 1"><link rel=canonical href=https://minhbodoivl.github.io/MinhBlog/posts/post2/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/MinhBlog/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-light"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://minhbodoivl.github.io/MinhBlog/>MinhBlog
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/MinhBlog/about>Giới thiệu</a></li><li class=navigation-item><a class=navigation-link href=/MinhBlog/posts>Blog</a></li><li class=navigation-item><a class=navigation-link href=/MinhBlog/contact>Liên hệ</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://minhbodoivl.github.io/MinhBlog/posts/post2/>Bài viết 2 – Bước đầu vào thế giới lập trình hướng đối tượng</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2025-09-10T00:00:00Z>September 10, 2025
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+4-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/MinhBlog/tags/java/>Java</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/cisco-networking-academy/>Cisco Networking Academy</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng/>Lập Trình Hướng Đối Tượng</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/java-essentials-1/>Java Essentials 1</a></span></div></div></header><div class=post-content><blockquote><p><em>“Bài viết thứ hai, mình chính thức bước vào thế giới lập trình, nơi những dòng code đầu tiên bắt đầu có ý nghĩa.”</em></p></blockquote><hr><h2 id=-mục-tiêu>🎯 Mục tiêu
+<a class=heading-link href=#-m%e1%bb%a5c-ti%c3%aau><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><ul><li>Làm quen với <strong>Java Essentials 1</strong>.</li><li>Hiểu cú pháp cơ bản: biến, kiểu dữ liệu, cấu trúc chương trình.</li><li>Thực hành viết chương trình, vòng lặp, và điều kiện.</li></ul><hr><h2 id=-cảm-nhận-đầu-tiên>💡 Cảm nhận đầu tiên
+<a class=heading-link href=#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Sau Bài viết đầu tiên làm quen với <strong>Networking Basics</strong>, mình chính thức bước sang giai đoạn thứ hai của khoá học tại <strong>Cisco Networking Academy</strong> – đó là <strong>Java Essentials 1</strong>.<br>Đây cũng là Bài viết đầu tiên mình thực sự <em>code nhiều</em>, và bắt đầu cảm nhận “hơi thở” của ngôn ngữ lập trình Java.</p><p>Trước đây mình đã nghe nhiều về Java – một ngôn ngữ mạnh mẽ, phổ biến, dùng từ ứng dụng desktop đến Android. Nhưng khi bắt đầu học chính thức, điều đầu tiên mình cảm thấy là <strong>Java chặt chẽ và có quy tắc rõ ràng</strong>.<br>Mọi thứ từ cách đặt tên lớp, dấu ngoặc nhọn, đến khai báo biến đều phải chính xác.</p><p>Điểm mình thích là môi trường học của Cisco có <strong>IDE trực tuyến</strong>, cho phép viết – biên dịch – chạy chương trình ngay trên trình duyệt, không cần cài đặt.<br>Điều này giúp mình tập trung vào việc học ngôn ngữ hơn là cài công cụ.</p><hr><h2 id=-kiến-thức-học-được>📚 Kiến thức học được
+<a class=heading-link href=#-ki%e1%ba%bfn-th%e1%bb%a9c-h%e1%bb%8dc-%c4%91%c6%b0%e1%bb%a3c><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><h3 id=-cấu-trúc-chương-trình-java>🔸 Cấu trúc chương trình Java
+<a class=heading-link href=#-c%e1%ba%a5u-tr%c3%bac-ch%c6%b0%c6%a1ng-tr%c3%acnh-java><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Một chương trình Java luôn bắt đầu bằng <strong>class</strong> chứa hàm <code>main()</code>, ví dụ:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HelloWorld</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Xin chào thế giới Java!&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>💬 Mình hiểu được rằng mọi thứ trong Java đều phải nằm trong một lớp, và <code>main()</code> là điểm bắt đầu của chương trình.</p><h4 id=-biến-và-kiểu-dữ-liệu><strong>🔸 Biến và kiểu dữ liệu</strong>
+<a class=heading-link href=#-bi%e1%ba%bfn-v%c3%a0-ki%e1%bb%83u-d%e1%bb%af-li%e1%bb%87u><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>Mình được học cách khai báo và sử dụng các kiểu dữ liệu cơ bản:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>int</span> tuoi <span style=color:#f92672>=</span> 20;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>double</span> diemTB <span style=color:#f92672>=</span> 8.<span style=color:#a6e22e>5</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>char</span> kyTu <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;A&#39;</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>boolean</span> daTotNghiep <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>;
+</span></span><span style=display:flex><span>String ten <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Minh Coder&#34;</span>;
+</span></span></code></pre></div><p>Cảm giác khá dễ hiểu, vì cú pháp Java rõ ràng, gần giống C#, nhưng có quy tắc nghiêm ngặt hơn.</p><h4 id=-toán-tử-và-điều-kiện><strong>🔸 Toán tử và điều kiện</strong>
+<a class=heading-link href=#-to%c3%a1n-t%e1%bb%ad-v%c3%a0-%c4%91i%e1%bb%81u-ki%e1%bb%87n><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>Các bài tập giúp mình ôn lại kiến thức logic như <code>if</code>, <code>else</code>, <code>switch</code>, toán tử so sánh (<code>==,</code> <code>!=,</code> <code>>,</code> <code>&lt;</code>) và toán tử logic (<code>&&</code>, <code>||</code>).
+Ví dụ bài tập tính điểm trung bình và phân loại học sinh:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>if</span> (diemTB <span style=color:#f92672>&gt;=</span> 8.<span style=color:#a6e22e>0</span>)
+</span></span><span style=display:flex><span>    System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Giỏi&#34;</span>);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (diemTB <span style=color:#f92672>&gt;=</span> 6.<span style=color:#a6e22e>5</span>)
+</span></span><span style=display:flex><span>    System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Khá&#34;</span>);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>    System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Trung bình&#34;</span>);
+</span></span></code></pre></div><h4 id=-vòng-lặp-trong-java><strong>🔸 Vòng lặp trong Java</strong>
+<a class=heading-link href=#-v%c3%b2ng-l%e1%ba%b7p-trong-java><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h4><p>Mình luyện tập viết các vòng lặp <code>for</code>, <code>while</code>, <code>do-while</code> để tính tổng, in bảng cửu chương, hoặc kiểm tra số nguyên tố.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span>Scanner sc <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Scanner(System.<span style=color:#a6e22e>in</span>);
+</span></span><span style=display:flex><span>System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>print</span>(<span style=color:#e6db74>&#34;Nhập n: &#34;</span>);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> n <span style=color:#f92672>=</span> sc.<span style=color:#a6e22e>nextInt</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> sum <span style=color:#f92672>=</span> 0;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 1; i <span style=color:#f92672>&lt;=</span> n; i<span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>    sum <span style=color:#f92672>+=</span> i;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Tổng từ 1 đến &#34;</span> <span style=color:#f92672>+</span> n <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; là: &#34;</span> <span style=color:#f92672>+</span> sum);
+</span></span></code></pre></div><h3 id=-kinh-nghiệm-học-tập>📝 Kinh nghiệm học tập
+<a class=heading-link href=#-kinh-nghi%e1%bb%87m-h%e1%bb%8dc-t%e1%ba%adp><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li><p>⏰ <strong>Chia nhỏ mục tiêu mỗi ngày:</strong> chỉ học 1–2 module, tránh học dồn vì Java cần thời gian để “ngấm”.</p></li><li><p>✍️ <strong>Tự gõ code, không copy:</strong> giúp nhớ cú pháp lâu hơn và phát hiện lỗi dễ hơn.</p></li><li><p>💬 <strong>Dùng comment để hiểu code:</strong> tập thói quen thêm chú thích <code>//</code> hoặc <code>/* ... */.</code></p></li><li><p>💡 <strong>Thực hành thêm ngoài bài học:</strong> sau mỗi module, mình tự nghĩ thêm 1–2 bài tập nhỏ như:</p><ul><li>Viết chương trình đổi nhiệt độ C ↔ F.</li><li>Tính tổng các số lẻ từ 1 đến 100.</li><li>In tam giác sao theo chiều cao nhập vào.</li></ul></li></ul><h3 id=-khó-khăn--cách-vượt-qua>⚙️ Khó khăn & Cách vượt qua
+<a class=heading-link href=#-kh%c3%b3-kh%c4%83n--c%c3%a1ch-v%c6%b0%e1%bb%a3t-qua><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p><strong>🧩 Lỗi cú pháp liên tục</strong></p><ul><li><strong>Vấn đề:</strong> chỉ thiếu dấu {} hoặc ; là lỗi.</li><li><strong>Giải pháp:</strong> học cách đọc lỗi terminal để sửa nhanh.</li></ul><p><strong>🧠 Nhớ quy tắc đặt tên</strong></p><ul><li><strong>Vấn đề:</strong> lớp viết hoa chữ cái đầu (<code>StudentInfo</code>), biến viết thường (<code>studentAge</code>).</li><li><strong>Giải pháp:</strong> lặp lại quy tắc mỗi khi viết class mới.</li></ul><p><strong>💭 Khái niệm “class” và “object”</strong></p><ul><li><strong>Vấn đề:</strong> còn khá trừu tượng.</li><li><strong>Giải pháp:</strong> chuẩn bị tinh thần để hiểu kỹ hơn trong Bài viết 3, khi học lập trình hướng đối tượng (OOP).</li></ul><h3 id=-kết-quả--kế-hoạch>✅ Kết quả & Kế hoạch
+<a class=heading-link href=#-k%e1%ba%bft-qu%e1%ba%a3--k%e1%ba%bf-ho%e1%ba%a1ch><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p><strong>Bài viết 2 — Kết quả</strong></p><ul><li>Hoàn thành khoảng <strong>50% nội dung Java Essentials 1.</strong></li></ul><p>-Nắm được:</p><pre><code>- Cấu trúc chương trình Java.
 
 - Biến, kiểu dữ liệu, toán tử và điều kiện.
 
 - Các vòng lặp cơ bản.
-</code></pre>
-<p><strong>Bài viết 3 — Kế hoạch</strong></p>
-<ul>
-<li>
-<p>Bắt đầu học <strong>lập trình hướng đối tượng (OOP):</strong> <em>class, object, method, constructor</em>.</p>
-</li>
-<li>
-<p>Tăng cường thực hành nhiều ví dụ nhỏ để hiểu sâu hơn bản chất Java.</p>
-</li>
-</ul>
-<hr>
-<blockquote>
-<p><em>🌱 Bài viết 2 khép lại với cảm giác phấn khích. Vì mình đã viết được những dòng code đầu tiên thật sự “chạy được”, và thấy rõ lập trình không chỉ là lý thuyết, mà là công cụ để sáng tạo.</em></p>
-</blockquote>
-
-      </div>
-
-
-      <footer>
-        
-
-
-        
-        
-        
-        
-        
-        
-        
-      </footer>
-    </article>
-
-    
-  </section>
-
-    </div>
-
-    <footer class="footer">
-  <section class="container">
-    ©
-    
-    2025
-     Nguyễn Đình Anh Minh 
-    ·
-    
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
-    
-  </section>
-</footer>
-
-  </main>
-
-  
-
-  
-  
-  <script src="/MinhBlog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</body>
-</html>
+</code></pre><p><strong>Bài viết 3 — Kế hoạch</strong></p><ul><li><p>Bắt đầu học <strong>lập trình hướng đối tượng (OOP):</strong> <em>class, object, method, constructor</em>.</p></li><li><p>Tăng cường thực hành nhiều ví dụ nhỏ để hiểu sâu hơn bản chất Java.</p></li></ul><hr><blockquote><p><em>🌱 Bài viết 2 khép lại với cảm giác phấn khích. Vì mình đã viết được những dòng code đầu tiên thật sự “chạy được”, và thấy rõ lập trình không chỉ là lý thuyết, mà là công cụ để sáng tạo.</em></p></blockquote></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2025
+Nguyễn Đình Anh Minh
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/MinhBlog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>

@@ -1,19 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Throw on MinhBlog</title>
-    <link>https://minhbodoivl.github.io/MinhBlog/tags/throw/</link>
-    <description>Recent content in Throw on MinhBlog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 17 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/throw/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Bài viết 10 - Làm quen với Exception Handling trong Java</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/posts/post10/</link>
-      <pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/posts/post10/</guid>
-      <description>&lt;h2 id=&#34;-bài-viết-10--làm-quen-với-exception-handling-trong-java&#34;&gt;&#xD;&#xA;  🗓️ Bài viết 10 — Làm quen với Exception Handling trong Java&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-b%c3%a0i-vi%e1%ba%bft-10--l%c3%a0m-quen-v%e1%bb%9bi-exception-handling-trong-java&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;-mục-tiêu-học-tập&#34;&gt;&#xD;&#xA;  🎯 Mục tiêu học tập&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-m%e1%bb%a5c-ti%c3%aau-h%e1%bb%8dc-t%e1%ba%adp&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hiểu khái niệm &lt;strong&gt;Exception&lt;/strong&gt; (ngoại lệ) và &lt;strong&gt;Error&lt;/strong&gt; (lỗi).&lt;/li&gt;&#xA;&lt;li&gt;Phân biệt &lt;strong&gt;checked&lt;/strong&gt; và &lt;strong&gt;unchecked exceptions&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Biết cách dùng &lt;strong&gt;try-catch-finally&lt;/strong&gt; để xử lý lỗi an toàn.&lt;/li&gt;&#xA;&lt;li&gt;Tự tạo exception riêng bằng &lt;code&gt;throw&lt;/code&gt; và &lt;code&gt;throws&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-khái-niệm-cơ-bản&#34;&gt;&#xD;&#xA;  🧠 Khái niệm cơ bản&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-kh%c3%a1i-ni%e1%bb%87m-c%c6%a1-b%e1%ba%a3n&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Trong Java, khi chương trình gặp lỗi như chia cho 0, truy cập mảng ngoài giới hạn, hoặc mở file không tồn tại, nó sẽ “ném” ra một &lt;strong&gt;Exception&lt;/strong&gt;.&lt;br&gt;&#xA;Nếu ta &lt;strong&gt;không xử lý&lt;/strong&gt;, chương trình sẽ &lt;strong&gt;bị dừng đột ngột&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Throw on MinhBlog</title><link>https://minhbodoivl.github.io/MinhBlog/tags/throw/</link><description>Recent content in Throw on MinhBlog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 17 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/throw/index.xml" rel="self" type="application/rss+xml"/><item><title>Bài viết 10 - Làm quen với Exception Handling trong Java</title><link>https://minhbodoivl.github.io/MinhBlog/posts/post10/</link><pubDate>Fri, 17 Oct 2025 00:00:00 +0000</pubDate><guid>https://minhbodoivl.github.io/MinhBlog/posts/post10/</guid><description>&lt;h2 id="-bài-viết-10--làm-quen-với-exception-handling-trong-java"&gt;
+ 🗓️ Bài viết 10 — Làm quen với Exception Handling trong Java
+ &lt;a class="heading-link" href="#-b%c3%a0i-vi%e1%ba%bft-10--l%c3%a0m-quen-v%e1%bb%9bi-exception-handling-trong-java"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id="-mục-tiêu-học-tập"&gt;
+ 🎯 Mục tiêu học tập
+ &lt;a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau-h%e1%bb%8dc-t%e1%ba%adp"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Hiểu khái niệm &lt;strong&gt;Exception&lt;/strong&gt; (ngoại lệ) và &lt;strong&gt;Error&lt;/strong&gt; (lỗi).&lt;/li&gt;
+&lt;li&gt;Phân biệt &lt;strong&gt;checked&lt;/strong&gt; và &lt;strong&gt;unchecked exceptions&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Biết cách dùng &lt;strong&gt;try-catch-finally&lt;/strong&gt; để xử lý lỗi an toàn.&lt;/li&gt;
+&lt;li&gt;Tự tạo exception riêng bằng &lt;code&gt;throw&lt;/code&gt; và &lt;code&gt;throws&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="-khái-niệm-cơ-bản"&gt;
+ 🧠 Khái niệm cơ bản
+ &lt;a class="heading-link" href="#-kh%c3%a1i-ni%e1%bb%87m-c%c6%a1-b%e1%ba%a3n"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Trong Java, khi chương trình gặp lỗi như chia cho 0, truy cập mảng ngoài giới hạn, hoặc mở file không tồn tại, nó sẽ “ném” ra một &lt;strong&gt;Exception&lt;/strong&gt;.&lt;br&gt;
+Nếu ta &lt;strong&gt;không xử lý&lt;/strong&gt;, chương trình sẽ &lt;strong&gt;bị dừng đột ngột&lt;/strong&gt;.&lt;/p&gt;</description></item></channel></rss>

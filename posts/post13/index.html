@@ -1,414 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>
-  Bài viết 13 - Exception nâng cao &amp; Debugging trong Java · MinhBlog
-</title>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light dark">
-
-
-
-
-<meta name="author" content="Nguyễn Đình Anh Minh">
-<meta name="description" content="Bài viết 13 của hành trình Java Essentials 2 – tìm hiểu cách xử lý ngoại lệ nâng cao, tạo ngoại lệ tùy chỉnh, và kỹ năng debug chương trình hiệu quả.">
-<meta name="keywords" content="">
-
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Bài viết 13 - Exception nâng cao & Debugging trong Java">
-  <meta name="twitter:description" content="Bài viết 13 của hành trình Java Essentials 2 – tìm hiểu cách xử lý ngoại lệ nâng cao, tạo ngoại lệ tùy chỉnh, và kỹ năng debug chương trình hiệu quả.">
-
-<meta property="og:url" content="https://minhbodoivl.github.io/MinhBlog/posts/post13/">
-  <meta property="og:site_name" content="MinhBlog">
-  <meta property="og:title" content="Bài viết 13 - Exception nâng cao & Debugging trong Java">
-  <meta property="og:description" content="Bài viết 13 của hành trình Java Essentials 2 – tìm hiểu cách xử lý ngoại lệ nâng cao, tạo ngoại lệ tùy chỉnh, và kỹ năng debug chương trình hiệu quả.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-10-20T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-10-20T00:00:00+00:00">
-    <meta property="article:tag" content="Java">
-    <meta property="article:tag" content="Exception Handling">
-    <meta property="article:tag" content="Debugging">
-    <meta property="article:tag" content="Java Essentials 2">
-    <meta property="article:tag" content="Cisco Networking Academy">
-
-
-
-
-<link rel="canonical" href="https://minhbodoivl.github.io/MinhBlog/posts/post13/">
-
-
-<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-
-
-  
-  
-  <link rel="stylesheet" href="/MinhBlog/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
-
-
-
-
-
-
-
-
- 
-
-
-
-
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
-
-
-
-
-
-</head>
-
-
-
-
-<body class="preload-transitions colorscheme-light">
-  
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
-
-
-  <main class="wrapper">
-    <nav class="navigation">
-  <section class="container">
-    
-    <a class="navigation-title" href="https://minhbodoivl.github.io/MinhBlog/">
-      MinhBlog
-    </a>
-    
-    
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
-        
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/MinhBlog/about">Giới thiệu</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/MinhBlog/posts">Blog</a>
-            </li>
-          
-            <li class="navigation-item">
-              <a class="navigation-link " href="/MinhBlog/contact">Liên hệ</a>
-            </li>
-          
-        
-        
-      </ul>
-    
-  </section>
-</nav>
-
-
-    <div class="content">
-      
-  <section class="container post">
-    <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="https://minhbodoivl.github.io/MinhBlog/posts/post13/">
-              Bài viết 13 - Exception nâng cao &amp; Debugging trong Java
-            </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
-              <time datetime="2025-10-20T00:00:00Z">
-                October 20, 2025
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              3-minute read
-            </span>
-          </div>
-          
-          
-          <div class="tags">
-  <i class="fa-solid fa-tag" aria-hidden="true"></i>
-    <span class="tag">
-      <a href="/MinhBlog/tags/java/">Java</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/exception-handling/">Exception Handling</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/debugging/">Debugging</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/java-essentials-2/">Java Essentials 2</a>
-    </span>
-      <span class="separator">•</span>
-    <span class="tag">
-      <a href="/MinhBlog/tags/cisco-networking-academy/">Cisco Networking Academy</a>
-    </span></div>
-
-        </div>
-      </header>
-
-      <div class="post-content">
-        
-        <h2 id="-bài-viết-13--exception-nâng-cao--debugging">
-  🗓️ Bài viết 13 — Exception nâng cao &amp; Debugging
-  <a class="heading-link" href="#-b%c3%a0i-vi%e1%ba%bft-13--exception-n%c3%a2ng-cao--debugging">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h2>
-<blockquote>
-<p><em>“Bắt lỗi không chỉ là vá lỗi — mà là hiểu cách chương trình hoạt động để ngăn lỗi tái diễn.”</em></p>
-</blockquote>
-<hr>
-<h3 id="-mục-tiêu">
-  🎯 Mục tiêu
-  <a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<ul>
-<li>Nắm vững <strong>xử lý nhiều loại ngoại lệ</strong> cùng lúc.</li>
-<li>Biết <strong>tạo ngoại lệ riêng (custom exception)</strong>.</li>
-<li>Làm quen với <strong>stack trace</strong> và <strong>debugger</strong> trong IDE (như IntelliJ, VS Code).</li>
-</ul>
-<hr>
-<h3 id="-1-bắt-nhiều-loại-lỗi-trong-cùng-try-catch">
-  ⚡ 1. Bắt nhiều loại lỗi trong cùng <code>try-catch</code>
-  <a class="heading-link" href="#-1-b%e1%ba%aft-nhi%e1%bb%81u-lo%e1%ba%a1i-l%e1%bb%97i-trong-c%c3%b9ng-try-catch">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> {1, 2, 3};
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(arr<span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>); <span style="color:#75715e">// lỗi ArrayIndexOutOfBounds</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> 10 <span style="color:#f92672">/</span> 0; <span style="color:#75715e">// lỗi Arithmetic</span>
-</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (ArithmeticException e) {
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi chia cho 0!&#34;</span>);
-</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (ArrayIndexOutOfBoundsException e) {
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Truy cập ngoài giới hạn mảng!&#34;</span>);
-</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (Exception e) {
-</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi không xác định: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>👉 Luôn <strong>bắt lỗi cụ thể trước</strong>, rồi mới đến <code>Exception</code> tổng quát.</p>
-<hr>
-<h3 id="-2-dùng-try-with-resources">
-  🧩 2. Dùng <code>try-with-resources</code>
-  <a class="heading-link" href="#-2-d%c3%b9ng-try-with-resources">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p>Đây là cú pháp giúp <strong>tự động đóng tài nguyên</strong>, ví dụ khi đọc/ghi file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.BufferedReader;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.FileReader;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReadFileExample</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> (BufferedReader br <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> FileReader(<span style="color:#e6db74">&#34;data.txt&#34;</span>))) {
-</span></span><span style="display:flex;"><span>            String line;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> ((line <span style="color:#f92672">=</span> br.<span style="color:#a6e22e">readLine</span>()) <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>) {
-</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(line);
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (IOException e) {
-</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Không thể đọc file: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>💡 Khi dùng <code>try-with-resources</code>, file sẽ được <strong>tự động đóng</strong> sau khi xong, không cần <code>finally</code>.</p>
-<hr>
-<h3 id="-3-tạo-custom-exception-ngoại-lệ-riêng">
-  🔨 3. Tạo Custom Exception (Ngoại lệ riêng)
-  <a class="heading-link" href="#-3-t%e1%ba%a1o-custom-exception-ngo%e1%ba%a1i-l%e1%bb%87-ri%c3%aang">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InvalidAgeException</span> <span style="color:#66d9ef">extends</span> Exception {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">InvalidAgeException</span>(String message) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>(message);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomExceptionDemo</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">checkAge</span>(<span style="color:#66d9ef">int</span> age) <span style="color:#66d9ef">throws</span> InvalidAgeException {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (age <span style="color:#f92672">&lt;</span> 18)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> InvalidAgeException(<span style="color:#e6db74">&#34;Tuổi phải &gt;= 18 để đăng ký!&#34;</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
-</span></span><span style="display:flex;"><span>            checkAge(16);
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (InvalidAgeException e) {
-</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Lỗi: &#34;</span> <span style="color:#f92672">+</span> e.<span style="color:#a6e22e">getMessage</span>());
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>🔹 Việc tạo exception riêng giúp chương trình dễ đọc, dễ bảo trì và rõ ràng hơn về lỗi.</p>
-<hr>
-<h3 id="-4-debugging--kỹ-năng-cần-thiết">
-  🧠 4. Debugging – Kỹ năng cần thiết
-  <a class="heading-link" href="#-4-debugging--k%e1%bb%b9-n%c4%83ng-c%e1%ba%a7n-thi%e1%ba%bft">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<p>Cisco giới thiệu công cụ <strong>Debugger</strong> trong IDE:</p>
-<ul>
-<li>Đặt <strong>breakpoint</strong> để dừng chương trình tại vị trí cụ thể.</li>
-<li>Dò <strong>giá trị biến</strong> từng bước chạy.</li>
-<li>Quan sát <strong>stack trace</strong> khi lỗi xảy ra.</li>
-</ul>
-<blockquote>
-<p>Sau vài lần thực hành, mình thấy debug giúp hiểu logic chương trình sâu hơn, và tiết kiệm rất nhiều thời gian tìm bug.</p>
-</blockquote>
-<hr>
-<h3 id="-5-một-số-mẹo-nhỏ">
-  💬 5. Một số mẹo nhỏ
-  <a class="heading-link" href="#-5-m%e1%bb%99t-s%e1%bb%91-m%e1%ba%b9o-nh%e1%bb%8f">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<ul>
-<li>In thông tin lỗi cụ thể: <code>e.printStackTrace();</code></li>
-<li>Luôn ghi log thay vì chỉ <code>System.out.println()</code> trong project lớn.</li>
-<li>Khi gặp lỗi không rõ nguyên nhân, đặt breakpoint tại vùng nghi ngờ và chạy debug từng dòng.</li>
-</ul>
-<hr>
-<h3 id="-tổng-kết-bài-viết-13">
-  ✅ Tổng kết Bài viết 13
-  <a class="heading-link" href="#-t%e1%bb%95ng-k%e1%ba%bft-b%c3%a0i-vi%e1%ba%bft-13">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h3>
-<ul>
-<li>Biết xử lý <strong>nhiều lỗi khác nhau</strong> bằng nhiều <code>catch</code>.</li>
-<li>Tự tạo <strong>exception riêng</strong> để mô tả lỗi rõ ràng hơn.</li>
-<li>Làm quen với <strong>debugger</strong> – công cụ cực kỳ quan trọng khi phát triển phần mềm thực tế.</li>
-</ul>
-
-      </div>
-
-
-      <footer>
-        
-
-
-        
-        
-        
-        
-        
-        
-        
-      </footer>
-    </article>
-
-    
-  </section>
-
-    </div>
-
-    <footer class="footer">
-  <section class="container">
-    ©
-    
-    2025
-     Nguyễn Đình Anh Minh 
-    ·
-    
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
-    
-  </section>
-</footer>
-
-  </main>
-
-  
-
-  
-  
-  <script src="/MinhBlog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</body>
-</html>
+<!doctype html><html lang=en><head><title>Bài viết 13 - Exception nâng cao & Debugging trong Java · MinhBlog</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Nguyễn Đình Anh Minh"><meta name=description content="Bài viết 13 của hành trình Java Essentials 2 – tìm hiểu cách xử lý ngoại lệ nâng cao, tạo ngoại lệ tùy chỉnh, và kỹ năng debug chương trình hiệu quả."><meta name=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="Bài viết 13 - Exception nâng cao & Debugging trong Java"><meta name=twitter:description content="Bài viết 13 của hành trình Java Essentials 2 – tìm hiểu cách xử lý ngoại lệ nâng cao, tạo ngoại lệ tùy chỉnh, và kỹ năng debug chương trình hiệu quả."><meta property="og:url" content="https://minhbodoivl.github.io/MinhBlog/posts/post13/"><meta property="og:site_name" content="MinhBlog"><meta property="og:title" content="Bài viết 13 - Exception nâng cao & Debugging trong Java"><meta property="og:description" content="Bài viết 13 của hành trình Java Essentials 2 – tìm hiểu cách xử lý ngoại lệ nâng cao, tạo ngoại lệ tùy chỉnh, và kỹ năng debug chương trình hiệu quả."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-10-20T00:00:00+00:00"><meta property="article:modified_time" content="2025-10-20T00:00:00+00:00"><meta property="article:tag" content="Java"><meta property="article:tag" content="Exception Handling"><meta property="article:tag" content="Debugging"><meta property="article:tag" content="Java Essentials 2"><meta property="article:tag" content="Cisco Networking Academy"><link rel=canonical href=https://minhbodoivl.github.io/MinhBlog/posts/post13/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/MinhBlog/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-light"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://minhbodoivl.github.io/MinhBlog/>MinhBlog
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/MinhBlog/about>Giới thiệu</a></li><li class=navigation-item><a class=navigation-link href=/MinhBlog/posts>Blog</a></li><li class=navigation-item><a class=navigation-link href=/MinhBlog/contact>Liên hệ</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://minhbodoivl.github.io/MinhBlog/posts/post13/>Bài viết 13 - Exception nâng cao & Debugging trong Java</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2025-10-20T00:00:00Z>October 20, 2025
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+3-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/MinhBlog/tags/java/>Java</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/exception-handling/>Exception Handling</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/debugging/>Debugging</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/java-essentials-2/>Java Essentials 2</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/MinhBlog/tags/cisco-networking-academy/>Cisco Networking Academy</a></span></div></div></header><div class=post-content><h2 id=-bài-viết-13--exception-nâng-cao--debugging>🗓️ Bài viết 13 — Exception nâng cao & Debugging
+<a class=heading-link href=#-b%c3%a0i-vi%e1%ba%bft-13--exception-n%c3%a2ng-cao--debugging><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><blockquote><p><em>“Bắt lỗi không chỉ là vá lỗi — mà là hiểu cách chương trình hoạt động để ngăn lỗi tái diễn.”</em></p></blockquote><hr><h3 id=-mục-tiêu>🎯 Mục tiêu
+<a class=heading-link href=#-m%e1%bb%a5c-ti%c3%aau><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li>Nắm vững <strong>xử lý nhiều loại ngoại lệ</strong> cùng lúc.</li><li>Biết <strong>tạo ngoại lệ riêng (custom exception)</strong>.</li><li>Làm quen với <strong>stack trace</strong> và <strong>debugger</strong> trong IDE (như IntelliJ, VS Code).</li></ul><hr><h3 id=-1-bắt-nhiều-loại-lỗi-trong-cùng-try-catch>⚡ 1. Bắt nhiều loại lỗi trong cùng <code>try-catch</code>
+<a class=heading-link href=#-1-b%e1%ba%aft-nhi%e1%bb%81u-lo%e1%ba%a1i-l%e1%bb%97i-trong-c%c3%b9ng-try-catch><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span><span style=color:#f92672>[]</span> arr <span style=color:#f92672>=</span> {1, 2, 3};
+</span></span><span style=display:flex><span>    System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(arr<span style=color:#f92672>[</span>5<span style=color:#f92672>]</span>); <span style=color:#75715e>// lỗi ArrayIndexOutOfBounds</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> result <span style=color:#f92672>=</span> 10 <span style=color:#f92672>/</span> 0; <span style=color:#75715e>// lỗi Arithmetic</span>
+</span></span><span style=display:flex><span>} <span style=color:#66d9ef>catch</span> (ArithmeticException e) {
+</span></span><span style=display:flex><span>    System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Lỗi chia cho 0!&#34;</span>);
+</span></span><span style=display:flex><span>} <span style=color:#66d9ef>catch</span> (ArrayIndexOutOfBoundsException e) {
+</span></span><span style=display:flex><span>    System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Truy cập ngoài giới hạn mảng!&#34;</span>);
+</span></span><span style=display:flex><span>} <span style=color:#66d9ef>catch</span> (Exception e) {
+</span></span><span style=display:flex><span>    System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Lỗi không xác định: &#34;</span> <span style=color:#f92672>+</span> e.<span style=color:#a6e22e>getMessage</span>());
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>👉 Luôn <strong>bắt lỗi cụ thể trước</strong>, rồi mới đến <code>Exception</code> tổng quát.</p><hr><h3 id=-2-dùng-try-with-resources>🧩 2. Dùng <code>try-with-resources</code>
+<a class=heading-link href=#-2-d%c3%b9ng-try-with-resources><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Đây là cú pháp giúp <strong>tự động đóng tài nguyên</strong>, ví dụ khi đọc/ghi file.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>import</span> java.io.BufferedReader;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.io.FileReader;
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> java.io.IOException;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ReadFileExample</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span> (BufferedReader br <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> BufferedReader(<span style=color:#66d9ef>new</span> FileReader(<span style=color:#e6db74>&#34;data.txt&#34;</span>))) {
+</span></span><span style=display:flex><span>            String line;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>while</span> ((line <span style=color:#f92672>=</span> br.<span style=color:#a6e22e>readLine</span>()) <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>                System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(line);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>catch</span> (IOException e) {
+</span></span><span style=display:flex><span>            System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Không thể đọc file: &#34;</span> <span style=color:#f92672>+</span> e.<span style=color:#a6e22e>getMessage</span>());
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>💡 Khi dùng <code>try-with-resources</code>, file sẽ được <strong>tự động đóng</strong> sau khi xong, không cần <code>finally</code>.</p><hr><h3 id=-3-tạo-custom-exception-ngoại-lệ-riêng>🔨 3. Tạo Custom Exception (Ngoại lệ riêng)
+<a class=heading-link href=#-3-t%e1%ba%a1o-custom-exception-ngo%e1%ba%a1i-l%e1%bb%87-ri%c3%aang><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>InvalidAgeException</span> <span style=color:#66d9ef>extends</span> Exception {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>InvalidAgeException</span>(String message) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>super</span>(message);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CustomExceptionDemo</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>checkAge</span>(<span style=color:#66d9ef>int</span> age) <span style=color:#66d9ef>throws</span> InvalidAgeException {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (age <span style=color:#f92672>&lt;</span> 18)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> InvalidAgeException(<span style=color:#e6db74>&#34;Tuổi phải &gt;= 18 để đăng ký!&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>            checkAge(16);
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>catch</span> (InvalidAgeException e) {
+</span></span><span style=display:flex><span>            System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Lỗi: &#34;</span> <span style=color:#f92672>+</span> e.<span style=color:#a6e22e>getMessage</span>());
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>🔹 Việc tạo exception riêng giúp chương trình dễ đọc, dễ bảo trì và rõ ràng hơn về lỗi.</p><hr><h3 id=-4-debugging--kỹ-năng-cần-thiết>🧠 4. Debugging – Kỹ năng cần thiết
+<a class=heading-link href=#-4-debugging--k%e1%bb%b9-n%c4%83ng-c%e1%ba%a7n-thi%e1%ba%bft><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><p>Cisco giới thiệu công cụ <strong>Debugger</strong> trong IDE:</p><ul><li>Đặt <strong>breakpoint</strong> để dừng chương trình tại vị trí cụ thể.</li><li>Dò <strong>giá trị biến</strong> từng bước chạy.</li><li>Quan sát <strong>stack trace</strong> khi lỗi xảy ra.</li></ul><blockquote><p>Sau vài lần thực hành, mình thấy debug giúp hiểu logic chương trình sâu hơn, và tiết kiệm rất nhiều thời gian tìm bug.</p></blockquote><hr><h3 id=-5-một-số-mẹo-nhỏ>💬 5. Một số mẹo nhỏ
+<a class=heading-link href=#-5-m%e1%bb%99t-s%e1%bb%91-m%e1%ba%b9o-nh%e1%bb%8f><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li>In thông tin lỗi cụ thể: <code>e.printStackTrace();</code></li><li>Luôn ghi log thay vì chỉ <code>System.out.println()</code> trong project lớn.</li><li>Khi gặp lỗi không rõ nguyên nhân, đặt breakpoint tại vùng nghi ngờ và chạy debug từng dòng.</li></ul><hr><h3 id=-tổng-kết-bài-viết-13>✅ Tổng kết Bài viết 13
+<a class=heading-link href=#-t%e1%bb%95ng-k%e1%ba%bft-b%c3%a0i-vi%e1%ba%bft-13><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><ul><li>Biết xử lý <strong>nhiều lỗi khác nhau</strong> bằng nhiều <code>catch</code>.</li><li>Tự tạo <strong>exception riêng</strong> để mô tả lỗi rõ ràng hơn.</li><li>Làm quen với <strong>debugger</strong> – công cụ cực kỳ quan trọng khi phát triển phần mềm thực tế.</li></ul></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2025
+Nguyễn Đình Anh Minh
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/MinhBlog/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>

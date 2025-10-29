@@ -1,19 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Array on MinhBlog</title>
-    <link>https://minhbodoivl.github.io/MinhBlog/tags/array/</link>
-    <description>Recent content in Array on MinhBlog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 28 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/array/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Bài viết 5 - Làm quen với mảng trong Java</title>
-      <link>https://minhbodoivl.github.io/MinhBlog/posts/post5/</link>
-      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://minhbodoivl.github.io/MinhBlog/posts/post5/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;“Nếu biến là nơi chứa một giá trị, thì mảng là cả một dãy ngăn tủ — giúp mình quản lý nhiều giá trị cùng lúc.”&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-mục-tiêu&#34;&gt;&#xD;&#xA;  🎯 Mục tiêu&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-m%e1%bb%a5c-ti%c3%aau&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hiểu &lt;strong&gt;khái niệm và cách khai báo mảng trong Java&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Biết cách &lt;strong&gt;duyệt mảng&lt;/strong&gt; bằng &lt;code&gt;for&lt;/code&gt; và &lt;code&gt;for-each&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Áp dụng mảng để &lt;strong&gt;tính toán, tìm giá trị lớn nhất/nhỏ nhất, trung bình&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Làm quen với &lt;strong&gt;mảng hai chiều&lt;/strong&gt; (matrix) – cơ sở cho nhiều ứng dụng thực tế.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-cảm-nhận-đầu-tiên&#34;&gt;&#xD;&#xA;  💡 Cảm nhận đầu tiên&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Bài viết này mình bắt đầu cảm nhận được &lt;strong&gt;sức mạnh thực sự của lập trình&lt;/strong&gt;: từ việc xử lý từng biến riêng lẻ sang &lt;strong&gt;làm việc với cả tập dữ liệu&lt;/strong&gt;.&lt;br&gt;&#xA;Ban đầu hơi rối vì cú pháp &lt;code&gt;[ ]&lt;/code&gt;, nhưng sau khi chạy vài ví dụ, mình thấy mảng khá dễ hiểu và cực kỳ tiện.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Array on MinhBlog</title><link>https://minhbodoivl.github.io/MinhBlog/tags/array/</link><description>Recent content in Array on MinhBlog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 28 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://minhbodoivl.github.io/MinhBlog/tags/array/index.xml" rel="self" type="application/rss+xml"/><item><title>Bài viết 5 - Làm quen với mảng trong Java</title><link>https://minhbodoivl.github.io/MinhBlog/posts/post5/</link><pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate><guid>https://minhbodoivl.github.io/MinhBlog/posts/post5/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“Nếu biến là nơi chứa một giá trị, thì mảng là cả một dãy ngăn tủ — giúp mình quản lý nhiều giá trị cùng lúc.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="-mục-tiêu"&gt;
+ 🎯 Mục tiêu
+ &lt;a class="heading-link" href="#-m%e1%bb%a5c-ti%c3%aau"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hiểu &lt;strong&gt;khái niệm và cách khai báo mảng trong Java&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Biết cách &lt;strong&gt;duyệt mảng&lt;/strong&gt; bằng &lt;code&gt;for&lt;/code&gt; và &lt;code&gt;for-each&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Áp dụng mảng để &lt;strong&gt;tính toán, tìm giá trị lớn nhất/nhỏ nhất, trung bình&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Làm quen với &lt;strong&gt;mảng hai chiều&lt;/strong&gt; (matrix) – cơ sở cho nhiều ứng dụng thực tế.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-cảm-nhận-đầu-tiên"&gt;
+ 💡 Cảm nhận đầu tiên
+ &lt;a class="heading-link" href="#-c%e1%ba%a3m-nh%e1%ba%adn-%c4%91%e1%ba%a7u-ti%c3%aan"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Bài viết này mình bắt đầu cảm nhận được &lt;strong&gt;sức mạnh thực sự của lập trình&lt;/strong&gt;: từ việc xử lý từng biến riêng lẻ sang &lt;strong&gt;làm việc với cả tập dữ liệu&lt;/strong&gt;.&lt;br&gt;
+Ban đầu hơi rối vì cú pháp &lt;code&gt;[ ]&lt;/code&gt;, nhưng sau khi chạy vài ví dụ, mình thấy mảng khá dễ hiểu và cực kỳ tiện.&lt;/p&gt;</description></item></channel></rss>
